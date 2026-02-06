@@ -1,0 +1,7 @@
+# CaraCore Hub — loja (GitHub Pages a partir de /docs)
+# Site estático: sem tema Jekyll para evitar erro com style.scss
+title: CaraCore Hub
+baseurl: ""
+url: "https://chmulato.github.io/caracore-hub-releases"
+theme: null
+markdown: kramdown

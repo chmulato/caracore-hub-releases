@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://chmulato.github.io/caracore-hub-releases/">
+    <title>CaraCore Hub — Gestão logística e e-commerce | Cara Core Informática</title>
+    <meta name="description" content="CaraCore Hub: plataforma de gestão logística e automação para e-commerce. SQLite local, autonomia local. Integração com marketplaces. Cara Core Informática.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #1a1d21;
+            --bg-card: #252a30;
+            --bg-elevated: #2d333b;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-gold: #d4a853;
+            --border: #373e47;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-dark);
+            min-height: 100vh;
+            padding: 0 20px 40px;
+        }
+        .wrapper { max-width: 900px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 24px; padding-top: 16px; }
+        .breadcrumb a { color: var(--accent-blue); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { color: var(--text-secondary); }
+        header {
+            padding: 48px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 12px; }
+        header .subtitle { font-size: 1rem; font-weight: 400; color: var(--text-secondary); max-width: 640px; margin: 0 auto; line-height: 1.65; }
+        .methodology { margin: 40px 0 48px; }
+        .methodology .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 28px 32px;
+        }
+        .methodology .card h2 { font-size: 1rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
+        .methodology .card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+        .methodology .card p strong { color: var(--text-primary); }
+        .methodology .card.card-differential { margin-top: 20px; border-left: 4px solid var(--accent-gold); }
+        .nav-section-title { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); margin-bottom: 20px; }
+        .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .nav-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, background 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav-card:hover { border-color: var(--accent-blue); background: var(--bg-elevated); }
+        .nav-card .icon { width: 40px; height: 40px; margin-bottom: 16px; flex-shrink: 0; }
+        .nav-card .icon svg { width: 100%; height: 100%; }
+        .nav-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+        .nav-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.55; }
+        .hero-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 32px 36px; margin-bottom: 40px; border-left: 4px solid var(--accent-gold); }
+        .hero-cta .hero-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 10px; }
+        .hero-cta .hero-title { font-size: 1.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; line-height: 1.4; }
+        .hero-cta .hero-desc { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.65; }
+        .hero-cta .cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+        .hero-cta .cta-btn { display: inline-block; padding: 14px 24px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity 0.2s, background 0.2s; }
+        .hero-cta .cta-btn-primary { background: var(--accent-blue); color: #0d1117; border: none; }
+        .hero-cta .cta-btn-primary:hover { opacity: 0.95; filter: brightness(1.1); }
+        .hero-cta .cta-btn-secondary { background: transparent; color: var(--accent-gold); border: 2px solid var(--accent-gold); }
+        .hero-cta .cta-btn-secondary:hover { background: rgba(212, 168, 83, 0.12); }
+        footer { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-secondary); }
+        footer p { margin-bottom: 8px; }
+        footer a { color: var(--accent-blue); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="https://caracore.com.br/portfolio.html#caracore-hub">Cara Core Informática</a>
+            <span> · </span>
+            <a href="https://caracore.com.br/portfolio.html">Portfólio</a>
+            <span> · </span>
+            <span>CaraCore Hub</span>
+        </nav>
+
+        <!-- Hero: o que é, valor e CTA em poucos segundos -->
+        <section class="hero-cta" aria-label="O que é o Cara Core HUB?">
+            <p class="hero-label">O que é o Cara Core HUB?</p>
+            <h2 class="hero-title">Gestão logística e e-commerce para centros de distribuição — recebimento, triagem, estoque, retirada e integração com marketplaces.</h2>
+            <p class="hero-desc">Plataforma com <strong>SQLite local</strong>: o núcleo opera offline e você mantém autonomia. Ideal para operações de e-commerce e para negócios como o programa <strong>Tia Sócia</strong>. Desenvolvido pela Cara Core Informática.</p>
+            <div class="cta-buttons">
+                <a href="download.html" class="cta-btn cta-btn-primary">Cara Core HUB — Download e deploy</a>
+                <a href="slides/apresentacao_tia_socia.html" class="cta-btn cta-btn-secondary">Conhecer Tia Sócia — Ver pitch (cooperativa última milha)</a>
+            </div>
+        </section>
+
+        <header>
+            <h1>CaraCore Hub</h1>
+            <p class="subtitle">Plataforma de gestão logística e automação para e-commerce. Recebimento, triagem, estoque e retirada com integração a marketplaces. Banco SQLite local e autonomia local.</p>
+        </header>
+
+        <section class="methodology">
+            <div class="card">
+                <h2>O que é o CaraCore Hub?</h2>
+                <p>O <strong>CaraCore Hub</strong> é um sistema de gestão para centros de distribuição e operações de e-commerce: recebimento de pedidos, triagem, alocação em posições de estoque, mapa de ocupação, retirada e integração com marketplaces (Mercado Livre, Shopee, Temu, etc.). Desenvolvido pela Cara Core Informática com foco em <strong>autonomia local</strong>: banco de dados <strong>SQLite</strong> no servidor, sem dependência de internet para o núcleo operacional.</p>
+            </div>
+            <div class="card card-differential">
+                <h2>Autonomia local</h2>
+                <p>O Hub foi refatorado para usar <strong>apenas SQLite</strong> como banco de dados. Toda a operação de pedidos, volumes, posições e usuários roda localmente, protegendo a operação da instabilidade da internet. Integrações com marketplaces e notificações (WhatsApp, Telegram) utilizam rede quando configuradas; o cerne do sistema funciona offline.</p>
+            </div>
+            <div class="card card-differential">
+                <h2>Negócios aplicáveis</h2>
+                <p>O CaraCore Hub é um negócio aplicável a operações de e-commerce e centros de distribuição. Um exemplo é o projeto <strong>Tia Sócia</strong>, que se beneficia da gestão logística, recebimento, triagem, estoque e integração com marketplaces oferecidos pelo Hub. Não esquecemos o Tia Sócia: ele faz parte do ecossistema de negócios para os quais o Hub foi pensado. <a href="slides/apresentacao_tia_socia.html" style="color: var(--accent-blue);">Veja a apresentação (pitch deck)</a>.</p>
+            </div>
+        </section>
+
+        <p class="nav-section-title">Links</p>
+        <div class="nav-grid">
+            <a href="slides/apresentacao_tia_socia.html" class="nav-card" title="Pitch Tia Sócia">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </span>
+                <h3>Apresentação Tia Sócia</h3>
+                <p>Pitch deck do programa cooperativa Tia Sócia — negócio aplicável ao Hub. 21 slides.</p>
+            </a>
+            <a href="download.html" class="nav-card" title="Download e deploy">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </span>
+                <h3>Download</h3>
+                <p>Artefatos e Releases (WAR, instruções de deploy). GitHub Releases quando disponível.</p>
+            </a>
+            <a href="canal-feedback.html" class="nav-card" title="Suporte e feedback">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </span>
+                <h3>Canal de feedback</h3>
+                <p>E-mail suporte@caracore.com.br, WhatsApp e Telegram. Não atendemos ligações telefônicas.</p>
+            </a>
+            <a href="tecnologia.html" class="nav-card">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>
+                    </svg>
+                </span>
+                <h3>Tecnologia</h3>
+                <p>Java/Jakarta EE, SQLite, Tomcat. Stack local e autonomia operacional.</p>
+            </a>
+            <a href="https://caracore.com.br/portfolio.html#caracore-hub" class="nav-card">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </span>
+                <h3>Portfólio Cara Core</h3>
+                <p>CaraCore Hub no portfólio de produtos da Cara Core Informática.</p>
+            </a>
+            <a href="https://github.com/chmulato/caracore-hub" class="nav-card" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                </span>
+                <h3>Repositório</h3>
+                <p>chmulato/caracore-hub — projeto principal. Este repositório é a vitrine de releases.</p>
+            </a>
+        </div>
+
+        <footer>
+            <p><a href="https://caracore.com.br/portfolio.html#caracore-hub">Cara Core Informática — Portfólio</a> · <a href="https://caracore.com.br/delivery/hub/">Delivery (matriz)</a> · <a href="https://github.com/chmulato/caracore-hub-releases" target="_blank" rel="noopener">Repositório: caracore-hub-releases</a></p>
+            <p>CaraCore Hub — gestão logística e e-commerce. SQLite local, autonomia local.</p>
+        </footer>
+    </div>
+</body>
+</html>

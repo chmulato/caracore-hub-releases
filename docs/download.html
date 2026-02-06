@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://chmulato.github.io/caracore-hub-releases/">
+    <title>Download — CaraCore Hub | Cara Core Informática</title>
+    <meta name="description" content="Download e deploy do CaraCore Hub: artefatos e releases. Cara Core Informática.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-dark: #1a1d21; --bg-card: #252a30; --text-primary: #e6edf3; --text-secondary: #8b949e; --accent-blue: #58a6ff; --accent-gold: #d4a853; --border: #373e47; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-primary); background: var(--bg-dark); min-height: 100vh; padding: 0 20px 40px; }
+        .wrapper { max-width: 720px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 16px; padding-top: 16px; }
+        .breadcrumb a { color: var(--accent-blue); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { color: var(--text-secondary); }
+        header { padding: 40px 0 32px; text-align: center; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 0.95rem; color: var(--text-secondary); }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 28px 32px; margin: 28px 0; border-left: 4px solid var(--accent-gold); }
+        .card p { margin-bottom: 12px; font-size: 0.95rem; color: var(--text-secondary); }
+        .card p:last-child { margin-bottom: 0; }
+        .card a { color: var(--accent-blue); text-decoration: none; }
+        .card a:hover { text-decoration: underline; }
+        .btn-release { display: inline-block; margin-top: 16px; padding: 12px 24px; background: var(--accent-gold); color: #1a1d21; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .btn-release:hover { opacity: 0.9; }
+        .back { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+        .back a { color: var(--accent-blue); text-decoration: none; font-weight: 600; }
+        .back a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="https://caracore.com.br/portfolio.html#caracore-hub">Cara Core Informática</a>
+            <span> · </span>
+            <a href="https://caracore.com.br/portfolio.html">Portfólio</a>
+            <span> · </span>
+            <a href="index.html">CaraCore Hub</a>
+            <span> · </span>
+            <span>Download</span>
+        </nav>
+
+        <header>
+            <h1>Download — CaraCore Hub</h1>
+            <p>Artefatos de deploy e releases</p>
+        </header>
+
+        <section class="card">
+            <p>O <strong>CaraCore Hub</strong> é distribuído como aplicação Java (WAR) para deploy em servidor de aplicações (Tomcat). O banco de dados é <strong>SQLite</strong> local; não é necessário PostgreSQL.</p>
+            <p>Quando houver releases publicadas, o artefato e as instruções estarão disponíveis em:</p>
+            <a href="https://github.com/chmulato/caracore-hub-releases/releases/latest" class="btn-release" target="_blank" rel="noopener">Releases → Latest (GitHub)</a>
+            <p style="margin-top: 20px;">O código-fonte e o build do projeto estão no repositório <a href="https://github.com/chmulato/caracore-hub" target="_blank" rel="noopener">chmulato/caracore-hub</a>. Para deploy customizado, consulte a documentação do projeto e o <a href="https://caracore.com.br/delivery/hub/">portal de delivery (matriz)</a>.</p>
+        </section>
+
+        <nav class="back">
+            <a href="index.html">← Voltar ao portal</a> · <a href="https://caracore.com.br/delivery/hub/">Delivery (matriz)</a> · <a href="https://caracore.com.br/portfolio.html#caracore-hub">Portfólio</a>
+        </nav>
+    </div>
+</body>
+</html>

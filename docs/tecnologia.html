@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://chmulato.github.io/caracore-hub-releases/">
+    <title>Tecnologia — CaraCore Hub | Cara Core Informática</title>
+    <meta name="description" content="Stack do CaraCore Hub: Java/Jakarta EE, SQLite, Tomcat. Autonomia local.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-dark: #1a1d21; --bg-card: #252a30; --text-primary: #e6edf3; --text-secondary: #8b949e; --accent-blue: #58a6ff; --accent-gold: #d4a853; --border: #373e47; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-primary); background: var(--bg-dark); min-height: 100vh; padding: 0 20px 40px; }
+        .wrapper { max-width: 720px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 16px; padding-top: 16px; }
+        .breadcrumb a { color: var(--accent-blue); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { color: var(--text-secondary); }
+        header { padding: 40px 0 32px; text-align: center; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 0.95rem; color: var(--text-secondary); }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px 28px; margin: 20px 0; }
+        .card h2 { font-size: 1rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
+        .card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+        .card p strong { color: var(--text-primary); }
+        .back { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+        .back a { color: var(--accent-blue); text-decoration: none; font-weight: 600; }
+        .back a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="https://caracore.com.br/portfolio.html#caracore-hub">Cara Core Informática</a>
+            <span> · </span>
+            <a href="index.html">CaraCore Hub</a>
+            <span> · </span>
+            <span>Tecnologia</span>
+        </nav>
+
+        <header>
+            <h1>Tecnologia — CaraCore Hub</h1>
+            <p>Stack local e autonomia operacional</p>
+        </header>
+
+        <section class="card">
+            <h2>Backend</h2>
+            <p><strong>Java 11</strong> e <strong>Jakarta EE 10</strong>. Aplicação modular (core, persistence, api, web). Servidor de aplicações: <strong>Apache Tomcat</strong> ou WildFly. API REST (JAX-RS/Jersey) para integrações e front-end JSP para a interface de gestão.</p>
+        </section>
+
+        <section class="card">
+            <h2>Banco de dados — SQLite</h2>
+            <p>O Hub utiliza <strong>apenas SQLite</strong> como banco de dados. O arquivo de dados fica no servidor (ex.: <code>data/hub.db</code>), sem necessidade de PostgreSQL ou de rede para o núcleo operacional. Migrações com <strong>Flyway</strong>. Autonomia local: a operação de pedidos, estoque e posições não depende de conectividade.</p>
+        </section>
+
+        <section class="card">
+            <h2>Integrações e cache</h2>
+            <p>Integração com marketplaces (Mercado Livre, Shopee, Temu) via API e webhooks. Notificações por WhatsApp e Telegram quando configuradas. <strong>Redis</strong> é opcional (cache); o sistema funciona sem Redis, apenas com SQLite.</p>
+        </section>
+
+        <nav class="back">
+            <a href="index.html">← Voltar ao portal</a> · <a href="download.html">Download</a> · <a href="https://caracore.com.br/delivery/hub/tecnologia.html">Delivery (matriz)</a>
+        </nav>
+    </div>
+</body>
+</html>
