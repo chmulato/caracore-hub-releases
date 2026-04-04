@@ -51,3 +51,9 @@ Para ativar no GitHub Pages: Settings → Pages → Deploy from branch → main 
 ---
 
 *Cara Core Informática — CaraCore Hub (gestão logística, SQLite local, autonomia local).*
+
+## Licenca
+
+Este repositorio segue licenciamento proprietario institucional da Cara Core Informatica.
+Consulte [LICENSE](LICENSE).
+
