@@ -33,7 +33,7 @@ O desenvolvimento está no repositório **caracore-hub**. Este repositório (**c
 | Onde | Papel |
 |------|--------|
 | **Domínio Cara Core (matriz)** | Portal completo: `https://caracore.com.br/delivery/hub/` |
-| **Vitrine (este repo)** | Apresentação + link para Releases; GitHub Pages em `chmulato.github.io/caracore-hub-releases` |
+| **Vitrine (este repo)** | Apresentação + link para Releases; domínio público `hub.caracore.com.br` (espelho GitHub Pages). |
 
 O **delivery/hub** no site Cara Core é o portal completo. Este repo é a **vitrine** onde o cliente encontra a apresentação e o link para downloads/releases.
 

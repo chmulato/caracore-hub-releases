@@ -2,6 +2,6 @@
 # Site estático: sem tema Jekyll para evitar erro com style.scss
 title: CaraCore Hub
 baseurl: ""
-url: "https://chmulato.github.io/caracore-hub-releases"
+url: "https://hub.caracore.com.br"
 theme: null
 markdown: kramdown
