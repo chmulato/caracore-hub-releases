@@ -32,18 +32,18 @@ O desenvolvimento está no repositório **caracore-hub**. Este repositório (**c
 
 | Onde | Papel |
 |------|--------|
-| **Domínio Cara Core (matriz)** | Portal completo: `https://caracore.com.br/delivery/hub/` |
+| **Domínio Cara Core (matriz)** | Referência institucional: `https://www.caracore.com.br/portfolio.html#caracore-hub` |
 | **Vitrine (este repo)** | Apresentação + link para Releases; domínio público `hub.caracore.com.br` (espelho GitHub Pages). |
 
-O **delivery/hub** no site Cara Core é o portal completo. Este repo é a **vitrine** onde o cliente encontra a apresentação e o link para downloads/releases.
+O portfólio institucional da Cara Core referencia o produto. Este repo é a **vitrine** onde o cliente encontra a apresentação e o link para downloads/releases.
 
 ---
 
 ## Links
 
 - **Portal (este repo):** [index.html](index.html) · [download.html](download.html) · [canal-feedback.html](canal-feedback.html) · [tecnologia.html](tecnologia.html)
-- **Delivery (matriz):** [caracore.com.br/delivery/hub/](https://caracore.com.br/delivery/hub/)
-- **Portfólio:** [CaraCore Hub no portfólio](https://caracore.com.br/portfolio.html#caracore-hub)
+- **Portfólio (matriz):** [CaraCore Hub no portfólio](https://www.caracore.com.br/portfolio.html#caracore-hub)
+- **Portfólio:** [CaraCore Hub no portfólio](https://www.caracore.com.br/portfolio.html#caracore-hub)
 - **Projeto principal:** [github.com/chmulato/caracore-hub](https://github.com/chmulato/caracore-hub)
 
 Para ativar no GitHub Pages: Settings → Pages → Deploy from branch → main (raiz). O arquivo **.nojekyll** evita processamento Jekyll.
