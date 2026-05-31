@@ -1,0 +1,25 @@
+---
+description: Memória da loja Cara Core Hub — caracore-hub-releases; vitrine hub.caracore.com.br
+alwaysApply: true
+---
+
+# Memória da Loja — caracore-hub-releases
+
+## Repositório e papel
+- **caracore-hub-releases:** loja (vitrine e releases) do **Cara Core Hub**.
+- **URL:** https://hub.caracore.com.br/
+- **Publicação:** GitHub Pages a partir de **docs/**.
+- **Oficina:** caracore-hub (privado).
+
+## Matriz e ecossistema
+- **Portfólio:** `portfolio.html#caracore-hub` · footer loja → portfólio
+- **Posicionamento:** B2B / sob consulta
+- **Índice:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
+
+## Estrutura do site (docs/)
+- **index.html** — Portal da loja
+- **download.html** · **wiki/** · **canal-feedback.html** (conforme molde COMPONENTES_LOJA.txt)
+
+## Convenções
+- Não usar `/delivery/hub` em CTAs; matriz só resumo + link para esta loja.
+- Alinhar com oficina e VALIDACAO_LOJAS_MATRIZ.txt ao publicar.
