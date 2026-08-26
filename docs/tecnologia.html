@@ -35,13 +35,13 @@
         </section>
 
         <section class="card">
-            <h2>Banco de dados — SQLite</h2>
-            <p>O Hub utiliza <strong>apenas SQLite</strong> como banco de dados. O arquivo de dados fica no servidor (ex.: <code>data/hub.db</code>), sem necessidade de PostgreSQL ou de rede para o núcleo operacional. Migrações com <strong>Flyway</strong>. Autonomia local: a operação de pedidos, estoque e posições não depende de conectividade.</p>
+            <h2>Banco de dados</h2>
+            <p>O destino público (instalador Windows, 06/04/2027) usa <strong>SQLite</strong> no computador do cliente. A oficina web atual ainda opera com <strong>PostgreSQL</strong> (Redis opcional para cache). Não trate “apenas SQLite” como o estado do WAR de desenvolvimento.</p>
         </section>
 
         <section class="card">
             <h2>Integrações e cache</h2>
-            <p>Integração com marketplaces (Mercado Livre, Shopee, Temu) via API e webhooks. Notificações por WhatsApp e Telegram quando configuradas. <strong>Redis</strong> é opcional (cache); o sistema funciona sem Redis, apenas com SQLite.</p>
+            <p>Integração com marketplaces (Mercado Livre, Shopee, Temu) via API e webhooks. Notificações por WhatsApp quando configuradas. <strong>Redis</strong> é cache opcional na oficina web atual.</p>
         </section>
 
         <nav class="back">
