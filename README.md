@@ -43,7 +43,7 @@ O portfólio institucional da Cara Core referencia o produto. Este repo é a **v
 
 - **Portal (este repo):** [index.html](index.html) · [download.html](download.html) · [canal-feedback.html](canal-feedback.html) · [tecnologia.html](tecnologia.html)
 - **Loja / vitrine:** [hub.caracore.com.br](https://hub.caracore.com.br/)
-- **Documentação do produto (wiki na loja):** [projeto-hub](https://hub.caracore.com.br/wiki/projeto-hub.html)
+- **Documentação do produto (wiki):** [projeto-hub](https://wiki.caracore.com.br/projeto-hub.html)
 - **Projeto principal:** [github.com/chmulato/caracore-hub](https://github.com/chmulato/caracore-hub)
 
 Para ativar no GitHub Pages: Settings → Pages → Deploy from branch → main (raiz). O arquivo **.nojekyll** evita processamento Jekyll.
