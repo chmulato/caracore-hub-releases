@@ -7,15 +7,21 @@ alwaysApply: true
 
 ## Repositório e papel
 - **caracore-hub-releases:** vitrine do **CaraCore Hub** (encomendas; ML, Shopee, Temu).
-- **URL:** https://hub.caracore.com.br/ · GitHub Pages a partir de **docs/**.
-- **Oficina:** caracore-hub (web 2.1, PostgreSQL na oficina; destino público SQLite no instalador 2027).
+- **URL:** https://hub.caracore.com.br/ · GitHub Pages a partir da raiz / `docs/`.
+- **Oficina:** `caracore-hub` — web 2.1 pronta (PostgreSQL na oficina). Destino público: SQLite no instalador **06/04/2027**.
+- Retomada IAs (oficina): `../caracore-hub/docs/contexto-rapido.md`
 
 ## Mensagem honesta
 - Vitrine e artefatos WAR de **pré-lançamento** já públicos.
-- GA do instalador Windows: **06/04/2027**.
+- GA do instalador Windows: **06/04/2027**. Não publicar `download.html` como se o EXE de GA já existisse.
 - Não afirmar “já é só SQLite / sem PostgreSQL” como estado atual da oficina.
 - Não descrever como Flask ou “cérebro da Cara Core”. Tia Sócia = pitch.
 
+## Documentação
+- Alinhamento: https://wiki.caracore.com.br/projeto-hub.html
+- Manual de uso (oficina web): https://wiki.caracore.com.br/hub/
+- `docs/wiki/` nesta loja só **redireciona** para o portal.
+
 ## Convenções
 - CTAs → este subdomínio, nunca `/delivery/hub`.
-- Wiki da loja em `docs/wiki/` alinhada à wiki institucional `projeto-hub.html`.
+- Matriz: `portfolio.html#caracore-hub`.
