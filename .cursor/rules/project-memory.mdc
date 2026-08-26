@@ -1,25 +1,21 @@
 ---
-description: Memória da loja Cara Core Hub — caracore-hub-releases; vitrine hub.caracore.com.br
+description: Memória da loja CaraCore Hub — vitrine hub.caracore.com.br; pré-lançamento GA 06/04/2027
 alwaysApply: true
 ---
 
 # Memória da Loja — caracore-hub-releases
 
 ## Repositório e papel
-- **caracore-hub-releases:** loja (vitrine e releases) do **Cara Core Hub**.
-- **URL:** https://hub.caracore.com.br/
-- **Publicação:** GitHub Pages a partir de **docs/**.
-- **Oficina:** caracore-hub (privado).
+- **caracore-hub-releases:** vitrine do **CaraCore Hub** (encomendas; ML, Shopee, Temu).
+- **URL:** https://hub.caracore.com.br/ · GitHub Pages a partir de **docs/**.
+- **Oficina:** caracore-hub (web 2.1, PostgreSQL na oficina; destino público SQLite no instalador 2027).
 
-## Matriz e ecossistema
-- **Portfólio:** `portfolio.html#caracore-hub` · footer loja → portfólio
-- **Posicionamento:** B2B / sob consulta
-- **Índice:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
-
-## Estrutura do site (docs/)
-- **index.html** — Portal da loja
-- **download.html** · **wiki/** · **canal-feedback.html** (conforme molde COMPONENTES_LOJA.txt)
+## Mensagem honesta
+- Vitrine e artefatos WAR de **pré-lançamento** já públicos.
+- GA do instalador Windows: **06/04/2027**.
+- Não afirmar “já é só SQLite / sem PostgreSQL” como estado atual da oficina.
+- Não descrever como Flask ou “cérebro da Cara Core”. Tia Sócia = pitch.
 
 ## Convenções
-- Não usar `/delivery/hub` em CTAs; matriz só resumo + link para esta loja.
-- Alinhar com oficina e VALIDACAO_LOJAS_MATRIZ.txt ao publicar.
+- CTAs → este subdomínio, nunca `/delivery/hub`.
+- Wiki da loja em `docs/wiki/` alinhada à wiki institucional `projeto-hub.html`.
