@@ -1,0 +1,114 @@
+PROMPT — IA: remover ruídos da loja CaraCore Hub
+================================================
+
+Contexto
+--------
+Produto: CaraCore Hub (gestão de encomendas, centros de distribuição e e-commerce)
+Oficina: caracore-hub (privado)
+Loja: caracore-hub-releases -> https://hub.caracore.com.br/
+Wiki: https://wiki.caracore.com.br/projeto-hub.html
+Matriz: https://www.caracore.com.br/
+
+Objetivo
+--------
+Revisar a vitrine pública para que o visitante entenda rapidamente o que existe
+hoje, o que ainda não está à venda e qual é a data do GA do instalador Windows.
+Eliminar promessas de SaaS maduro, EXE já disponível, stack errada ou mistura
+com outros produtos da Cara Core.
+
+Não inventar funcionalidades, conectores, números, depoimentos ou datas.
+Não implementar o instalador nesta tarefa.
+
+Verdades oficiais
+-----------------
+1. Nome do produto: CaraCore Hub.
+2. Tia Sócia / Programa Tias Sócias: pitch ou exemplo ilustrativo, não é o nome do software.
+3. Conectores previstos/vivos: Mercado Livre, Shopee e Temu. Não listar Amazon como pronta.
+4. CTA público: https://hub.caracore.com.br/. Não usar /delivery/hub.
+5. Oficina atual: aplicação web WAR/Tomcat, Jakarta EE 10, Java 25, PostgreSQL no desenvolvimento e Redis opcional.
+6. Oferta futura: instalador Windows com Java 25 embutido, Tomcat local e SQLite/Bunker.
+7. GA planejado: 06/04/2027.
+8. Vitrine pública, WAR de oficina e instalador Windows são coisas diferentes.
+9. O Hub não é Área 51, Python/Flask, orquestrador interno da Cara Core ou “cérebro” de todos os produtos.
+10. Números e cenários do pitch Tia Sócia são ilustrativos.
+
+Ruídos a caçar
+--------------
+[ ] Frases que sugerem download imediato do EXE Bunker.
+[ ] Sugestão de SaaS público já operando.
+[ ] SQLite apresentado como estado atual do WAR, sem mencionar a transição.
+[ ] Java 11 ou outra versão diferente de Java 25.
+[ ] Mistura Hub com Área 51, Python, Flask ou orquestração interna.
+[ ] Amazon ou outros marketplaces não confirmados como conectores prontos.
+[ ] Tia Sócia usado como nome do produto.
+[ ] Links /delivery/hub ou caminhos mortos.
+[ ] Download sem indicar se é WAR, instrução ou release publicada.
+[ ] Roadmap apresentado como funcionalidade disponível.
+[ ] Comparação implícita de maturidade com PDV sem calendário.
+
+Tom e redação
+-------------
+- Português direto e honesto.
+- Usar, quando aplicável: “Pré-lançamento · instalador Windows (Java 25 + SQLite/Bunker): 06/04/2027”.
+- Distinguir sempre “Oficina hoje” de “Oferta pública futura”.
+- Rotular o pitch como “exemplo ilustrativo”.
+- Na tecnologia, mostrar duas linhas:
+  Oficina: Java 25/Jakarta EE/Tomcat/PostgreSQL/Redis opcional.
+  GA futuro: Java 25 embutido/Tomcat local/SQLite/WAL/Electron.
+- No download, declarar o artefato real desta fase. Não fingir que o EXE já existe.
+- Preservar o visual e o CSS existentes; priorizar copy, badges, datas e CTAs.
+
+Páginas a revisar
+-----------------
+- index.html
+- download.html
+- tecnologia.html
+- canal-feedback.html
+- README.md
+- docs/index.html
+- docs/download.html
+- docs/tecnologia.html
+- docs/canal-feedback.html
+- slides/apresentacao_tia_socia.html e cópias espelhadas
+
+Procedimento
+------------
+1. Abrir cada página e listar frases ruidosas com o motivo.
+2. Substituir somente o texto necessário pelas verdades oficiais.
+3. Manter ou inserir a data do GA: 06/04/2027.
+4. Conferir todos os links e CTAs.
+5. Procurar novamente por Java 11, Amazon, /delivery/hub, SaaS no ar e EXE disponível.
+6. Gerar uma lista “antes -> depois” para revisão.
+7. Não publicar, commitar ou alterar outros repositórios sem pedido explícito.
+
+Critérios de aceite
+-------------------
+[ ] Nenhuma página sugere que o instalador Windows já está à venda.
+[ ] Nenhuma página sugere SaaS público já operando.
+[ ] WAR atual e EXE futuro estão claramente separados.
+[ ] Java 25 é a versão pública da stack oficial.
+[ ] SQLite aparece como destino do GA 2027, não como promessa contraditória do WAR atual.
+[ ] Zero Amazon como conector pronto.
+[ ] Zero confusão com Área 51, Flask ou orquestrador interno.
+[ ] CaraCore Hub é sempre o nome do produto.
+[ ] Tia Sócia está rotulado como exemplo/pitch ilustrativo.
+[ ] CTA principal aponta para hub.caracore.com.br.
+[ ] Download descreve apenas artefatos realmente publicados.
+[ ] Nenhuma alteração de código do instalador foi feita nesta revisão.
+
+Fora de escopo
+--------------
+- Implementar o instalador Windows.
+- Mudar a data do GA.
+- Adicionar conectores.
+- Reescrever a oficina.
+- Criar promessas comerciais novas.
+
+Sugestão de título de PR
+------------------------
+fix(loja-hub): alinhar promessa pública ao plano Java 25 e SQLite
+
+Resumo sugerido:
+Alinha a vitrine do Hub à distinção entre WAR da oficina e instalador Windows
+futuro. Java 25 é a stack oficial; SQLite/Bunker é o destino do GA em
+06/04/2027; Tia Sócia permanece apenas como pitch ilustrativo.
