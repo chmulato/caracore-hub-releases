@@ -2,7 +2,7 @@
 
 Repositório público de **delivery** e **vitrine** do **CaraCore Hub**: plataforma de gestão logística e automação para e-commerce da Cara Core Informática.
 
-**Foco:** banco **SQLite** local, **autonomia local** (proteção contra instabilidade da internet). Integração com marketplaces (Mercado Livre, Shopee, Temu), recebimento, triagem, estoque e retirada.
+**Foco do lançamento:** banco **SQLite** local, **autonomia local** (proteção contra instabilidade da internet). O instalador Windows está previsto para **06/04/2027**. A oficina web atual continua sendo distribuída como WAR e usa PostgreSQL no desenvolvimento.
 
 ---
 
@@ -12,8 +12,10 @@ O **CaraCore Hub** é um sistema de gestão para centros de distribuição:
 
 - Recebimento de pedidos, triagem, alocação em posições de estoque, mapa de ocupação, retirada.
 - Integração com marketplaces (webhooks e API).
-- Banco de dados **SQLite** no servidor — sem dependência de PostgreSQL; operação local e autônoma.
+- Banco de dados **SQLite** no instalador Windows futuro — sem dependência de PostgreSQL no computador do cliente.
 - Deploy como **WAR** em Tomcat (ou WildFly).
+
+Na fase atual, o artefato disponível é o WAR para a oficina web. O EXE ainda não está publicado; a promessa de autonomia/SQLite pertence ao GA Windows planejado.
 
 O desenvolvimento está no repositório **caracore-hub**. Este repositório (**caracore-hub-releases**) é o canal **público** de vitrine, documentação de delivery e, quando aplicável, artefatos de release (Releases no GitHub). O Hub é um negócio aplicável a operações como o projeto **Tia Sócia**, que se beneficia da gestão logística e integração com marketplaces.
 
