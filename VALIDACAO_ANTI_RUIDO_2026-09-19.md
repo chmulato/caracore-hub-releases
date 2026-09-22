@@ -5,9 +5,9 @@
 
 ## Resultado geral
 
-**GO condicionado.** A promessa principal da loja está alinhada ao ecossistema: WAR/oficina atual separado do instalador Windows futuro, Java 25 definido como stack, SQLite/Bunker associado ao GA de 06/04/2027 e ausência de EXE publicado declarada.
+**GO.** A promessa principal da loja está alinhada ao ecossistema: WAR/oficina atual separado do instalador Windows futuro, Java 25 definido como stack, SQLite/Bunker associado ao GA de 06/04/2027 e ausência de EXE publicado declarada.
 
-O pitch Tia Sócia ainda exige revisão editorial antes de marcar a loja como 100% anti-ruído.
+O pitch Tias Sócias permanece acessível apenas como cenário secundário e está rotulado como material ilustrativo, sem prova social, case, oferta de investimento ou resultados operacionais.
 
 ## Checklist
 
@@ -22,22 +22,14 @@ O pitch Tia Sócia ainda exige revisão editorial antes de marcar a loja como 10
 | Área 51/Python/Flask como identidade do Hub | GO | nenhuma ocorrência nas páginas-alvo |
 | CTA `/delivery/hub` | GO | nenhuma ocorrência na loja |
 | Tia Sócia rotulado como pitch ilustrativo na home | GO | home usa “conceito/proposta ilustrativa” |
-| Pitch sem números apresentados como prova real | NO-GO | `slides/assets/js/apresentacao-tia-socia.js` contém piloto validado, adoção 100%, NPS, projeções e linguagem de trajetória |
+| Pitch sem números apresentados como prova real | GO | roteiro e rodapé rotulam o material como cenário hipotético e removem alegações de piloto, NPS, receita e parceiros confirmados |
 | Cópias raiz e `docs/` sem Java 11 | GO | busca pública não encontrou Java 11 após alinhamento |
 | Download atual descrito honestamente | GO | WAR/instruções; EXE futuro sem pacote publicado |
 
-## Pendência única recomendada
+## Correção aplicada
 
-Revisar o pitch Tia Sócia para marcar explicitamente como **cenário ilustrativo/projeção**, removendo ou qualificando afirmações que pareçam evidência de mercado já comprovada:
-
-- “piloto já validou o modelo”;
-- adoção de 100%;
-- NPS acima de 90;
-- três mil vidas transformadas;
-- projeções financeiras apresentadas como trajetória comprovada.
-
-A correção deve preservar o pitch como exemplo de uso do Hub, sem transformá-lo em depoimento, case ou prova social.
+O pitch foi rebaixado na home, renomeado como cenário ilustrativo e teve as afirmações de piloto, adoção, NPS, receita, parceiros e trajetória comprovada substituídas por hipóteses de validação futura.
 
 ## Conclusão
 
-A loja está apta quanto à promessa técnica e ao calendário do produto. O status final recomendado é **GO técnico / NO-GO editorial do pitch** até a revisão das afirmações acima.
+A loja está apta quanto à promessa técnica, ao calendário do produto e ao enquadramento editorial do pitch. O status final recomendado é **GO**.

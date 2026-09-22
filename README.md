@@ -13,11 +13,11 @@ O **CaraCore Hub** é um sistema de gestão para centros de distribuição:
 - Recebimento de pedidos, triagem, alocação em posições de estoque, mapa de ocupação, retirada.
 - Integração com marketplaces (webhooks e API).
 - Banco de dados **SQLite** no instalador Windows futuro — sem dependência de PostgreSQL no computador do cliente.
-- Deploy como **WAR** em Tomcat (ou WildFly).
+- Deploy como **WAR** em Tomcat.
 
 Na fase atual, o artefato disponível é o WAR para a oficina web. O EXE ainda não está publicado; a promessa de autonomia/SQLite pertence ao GA Windows planejado.
 
-O desenvolvimento está no repositório **caracore-hub**. Este repositório (**caracore-hub-releases**) é o canal **público** de vitrine, documentação de delivery e, quando aplicável, artefatos de release (Releases no GitHub). O Hub é um negócio aplicável a operações como o projeto **Tia Sócia**, que se beneficia da gestão logística e integração com marketplaces.
+O desenvolvimento está no repositório **caracore-hub**. Este repositório (**caracore-hub-releases**) é o canal **público** de vitrine e, quando aplicável, artefatos de release (Releases no GitHub). O exemplo Tias Sócias é apenas um cenário ilustrativo de aplicação em última milha; não é produto, case ou prova de mercado.
 
 ---
 
@@ -25,7 +25,7 @@ O desenvolvimento está no repositório **caracore-hub**. Este repositório (**c
 
 | Onde   | O que tem |
 |--------|-----------|
-| **Raiz** | README, **index.html**, **download.html**, **canal-feedback.html**, **tecnologia.html** — portal de delivery no estilo dos outros produtos Cara Core (Minerador 4.0, Seed, etc.). |
+| **docs/** | Páginas publicadas no GitHub Pages: **index.html**, **download.html**, **canal-feedback.html**, **tecnologia.html** e assets da loja. |
 | **Releases** | Quando publicadas: artefatos de deploy (WAR, instruções) em [Releases](https://github.com/chmulato/caracore-hub-releases/releases). |
 
 ---
@@ -48,7 +48,7 @@ O portfólio institucional da Cara Core referencia o produto. Este repo é a **v
 - **Documentação do produto (wiki):** [projeto-hub](https://wiki.caracore.com.br/projeto-hub.html)
 - **Projeto principal:** [github.com/chmulato/caracore-hub](https://github.com/chmulato/caracore-hub)
 
-Para ativar no GitHub Pages: Settings → Pages → Deploy from branch → main (raiz). O arquivo **.nojekyll** evita processamento Jekyll.
+Para ativar no GitHub Pages: Settings → Pages → Deploy from branch → main, diretório **/docs**. O arquivo **.nojekyll** evita processamento Jekyll.
 
 ---
 
