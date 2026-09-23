@@ -51,13 +51,20 @@
         </section>
 
         <section class="card">
+            <h2>Estado da aplicação web</h2>
+            <p>A versão <strong>2.1</strong> está concluída na oficina como WAR para Tomcat, com pedidos, estoque, etiquetas, inventário, retirada, auditoria e RBAC nos perfis <strong>ADMIN, SUPERVISOR e OPERADOR</strong>.</p>
+        </section>
+
+        <section class="card">
             <h2>Banco de dados</h2>
-            <p>O destino público é o instalador Windows de 06/04/2027, com <strong>Java 25 embutido</strong> e <strong>SQLite</strong> no computador do cliente. A oficina web atual ainda opera com <strong>PostgreSQL</strong> (Redis opcional para cache).</p>
+            <p>As migrações SQLite foram validadas na oficina. O destino público é o instalador Windows de 06/04/2027, com <strong>Java 25 embutido</strong>, <strong>Tomcat local</strong> e <strong>SQLite em modo WAL</strong>. A oficina web atual ainda opera com <strong>PostgreSQL</strong> (Redis opcional para cache).</p>
+
+            <p>O envelope desktop futuro usa <strong>Electron</strong> para iniciar o Tomcat local e abrir a interface. Ele ainda está em empacotamento e não é uma release disponível.</p>
         </section>
 
         <section class="card">
             <h2>Integrações e cache</h2>
-            <p>Integração com marketplaces (Mercado Livre, Shopee, Temu) via API e webhooks. Notificações por WhatsApp e Telegram quando configuradas. <strong>Redis</strong> é opcional (cache); o sistema funciona sem Redis, apenas com SQLite.</p>
+            <p>Integração com marketplaces (Mercado Livre, Shopee, Temu) via API e webhooks. Notificações por WhatsApp quando configuradas. <strong>Redis</strong> é opcional no ambiente web da oficina; ele não faz parte da dependência obrigatória do instalador futuro.</p>
         </section>
 
         <nav class="back">
