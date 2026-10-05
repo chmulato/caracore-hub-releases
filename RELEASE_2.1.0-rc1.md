@@ -17,12 +17,14 @@ O primeiro uso cria o administrador na tela de setup. Não há senha compartilha
 
 - Avaliação em perfil novo. Não é o instalador de produção previsto para 06/04/2027.
 - Atualização sobre uma versão anterior, backup e restauração não fazem parte deste aceite.
-- Código do binário: `6a2be4088d349a96f02871e5b03687acedaa3809`.
+- Código do binário: `46d1599e81dda58048f1a35250d025d5f0e3c782` na oficina `caracore-hub`.
+- O instalador grava `%LOCALAPPDATA%\CaraCore Hub\install.log` e avisa se o destino estiver em pasta temporária ou no OneDrive.
+- A causa do crash `0xC0000005` observado no instalador anterior não está confirmada. A suíte 9/9 foi executada no asset anterior (`f59b959d34c97f5048ebf2cfaadeb42a7e5b7d84597b15db00d790779def29ae`, 285.746.041 bytes), substituído por este arquivo na mesma tag.
 
 ## Integridade
 
-- Arquivo: `CaraCore Hub-2.1.0-rc1-win-x64.exe`
-- Tamanho: 285.746.041 bytes
-- SHA-256: `f59b959d34c97f5048ebf2cfaadeb42a7e5b7d84597b15db00d790779def29ae`
+- Arquivo: `CaraCore.Hub-2.1.0-rc1-win-x64.exe`
+- Tamanho: 285.745.501 bytes
+- SHA-256: `86f010a33359f92fbc03452d7a2d5f7a045b75f43c62dd3168c3e3c302c6e4e9`
 
 Feedback: https://hub.caracore.com.br/canal-feedback.html
