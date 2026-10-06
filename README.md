@@ -15,7 +15,7 @@ O **CaraCore Hub** é um sistema de gestão para centros de distribuição:
 - Banco de dados **SQLite** no instalador Windows futuro — sem dependência de PostgreSQL no computador do cliente.
 - Deploy como **WAR** em Tomcat.
 
-A pré-release Windows <code>v2.1.0-rc1</code> está publicada para avaliação, sem assinatura. Não é o GA. O instalador estável segue planejado para 06/04/2027. A oficina web continua como WAR, com PostgreSQL.
+A pré-release Windows <code>v2.1.0-rc1.1</code> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não é o GA. O instalador estável segue planejado para 06/04/2027. A tag <code>v2.1.0-rc1</code> permanece com o pacote de 05/10/2026. A oficina web continua como WAR, com PostgreSQL.
 
 O desenvolvimento está no repositório **caracore-hub**. Este repositório (**caracore-hub-releases**) é o canal **público** de vitrine e, quando aplicável, artefatos de release (Releases no GitHub). O exemplo Tias Sócias é apenas um cenário ilustrativo de aplicação em última milha; não é produto, case ou prova de mercado.
 
