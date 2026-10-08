@@ -25,8 +25,8 @@ Verdades oficiais
 2. Tia Sócia / Programa Tias Sócias: pitch ou exemplo ilustrativo, não é o nome do software.
 3. Conectores previstos/vivos: Mercado Livre, Shopee e Temu. Não listar Amazon como pronta.
 4. CTA público: https://hub.caracore.com.br/. Não usar /delivery/hub.
-5. Oficina atual: aplicação web WAR/Tomcat, Jakarta EE 10, Java 25, PostgreSQL no desenvolvimento e Redis opcional.
-6. Oferta futura: instalador Windows com Java 25 embutido, Tomcat local e SQLite/Bunker.
+5. Oficina e pré-release: aplicação web WAR/Tomcat, Jakarta EE 10, Java 25, banco SQLite local (WAL).
+6. Oferta pública: a mesma stack no instalador Windows, com Java 25 embutido e Tomcat local. Pré-release `v2.1.0-rc1.2` publicada para avaliação. GA em 06/04/2027.
 7. GA planejado: 06/04/2027.
 8. Vitrine pública, WAR de oficina e instalador Windows são coisas diferentes.
 9. O Hub não é Área 51, Python/Flask, orquestrador interno da Cara Core ou “cérebro” de todos os produtos.
@@ -36,7 +36,7 @@ Ruídos a caçar
 --------------
 [ ] Frases que sugerem download imediato do EXE Bunker.
 [ ] Sugestão de SaaS público já operando.
-[ ] SQLite apresentado como estado atual do WAR, sem mencionar a transição.
+[ ] PostgreSQL, Docker ou Java 17 apresentados como banco ou stack atual do Hub.
 [ ] Java 11 ou outra versão diferente de Java 25.
 [ ] Mistura Hub com Área 51, Python, Flask ou orquestração interna.
 [ ] Amazon ou outros marketplaces não confirmados como conectores prontos.
@@ -52,9 +52,7 @@ Tom e redação
 - Usar, quando aplicável: “Pré-lançamento · instalador Windows (Java 25 + SQLite/Bunker): 06/04/2027”.
 - Distinguir sempre “Oficina hoje” de “Oferta pública futura”.
 - Rotular o pitch como “exemplo ilustrativo”.
-- Na tecnologia, mostrar duas linhas:
-  Oficina: Java 25/Jakarta EE/Tomcat/PostgreSQL/Redis opcional.
-  GA futuro: Java 25 embutido/Tomcat local/SQLite/WAL/Electron.
+- Na tecnologia, mostrar: Java 25, Jakarta EE 10, Tomcat 10.1 e SQLite local (WAL).
 - No download, declarar o artefato real desta fase. Não fingir que o EXE já existe.
 - Preservar o visual e o CSS existentes; priorizar copy, badges, datas e CTAs.
 

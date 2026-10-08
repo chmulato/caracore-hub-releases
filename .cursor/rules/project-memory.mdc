@@ -8,7 +8,7 @@ alwaysApply: true
 ## Repositório e papel
 - **caracore-hub-releases:** vitrine do **CaraCore Hub** (encomendas; ML, Shopee, Temu).
 - **URL:** https://hub.caracore.com.br/ · GitHub Pages a partir da raiz / `docs/`.
-- **Oficina:** `caracore-hub` — web 2.1 pronta (PostgreSQL na oficina). Destino público: SQLite no instalador **06/04/2027**.
+- **Oficina:** `caracore-hub` — web 2.1 pronta. Banco do produto: SQLite local (WAL). Java 25, Jakarta EE 10, Tomcat 10.1. GA do instalador **06/04/2027**.
 - Retomada IAs (oficina): `../caracore-hub/docs/contexto-rapido.md`
 
 ## Pacote vigente — 08/10/2026
@@ -21,7 +21,7 @@ alwaysApply: true
 ## Mensagem honesta
 - Vitrine e artefatos WAR de **pré-lançamento** já públicos.
 - GA do instalador Windows: **06/04/2027**. Não publicar `download.html` como se o EXE de GA já existisse.
-- Não afirmar “já é só SQLite / sem PostgreSQL” como estado atual da oficina.
+- O banco do Hub é SQLite local (WAL), na oficina e na pré-release. Java 25, Jakarta EE 10, Tomcat 10.1.
 - Não descrever como Flask ou “cérebro da Cara Core”. Tia Sócia = pitch.
 
 ## Documentação
