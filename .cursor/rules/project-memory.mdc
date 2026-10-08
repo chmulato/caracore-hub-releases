@@ -11,6 +11,13 @@ alwaysApply: true
 - **Oficina:** `caracore-hub` — web 2.1 pronta (PostgreSQL na oficina). Destino público: SQLite no instalador **06/04/2027**.
 - Retomada IAs (oficina): `../caracore-hub/docs/contexto-rapido.md`
 
+## Pacote vigente — 08/10/2026
+
+- Tag `v2.1.0-rc1.2`, prerelease, unsigned. Instalador `CaraCore.Hub-2.1.0-rc1.2-win-x64.exe`, 281.529.680 bytes, SHA-256 `50d38ff0ee4defce5bb2598967331d0295fb4817dbec59df5d3e7574b22975e5`. ZIP da mesma edição, 333.342.883 bytes, SHA-256 `ec82b2bd57053c252faac4fdbb0066e9a5cea2df293562b35384107e5cb624b4`.
+- FileVersion `2.1.0-rc1.2`. Manifesto do commit `463a854`, árvore limpa. Não é GA.
+- `v2.1.0-rc1.1` conserva o pacote de 06/10. `v2.1.0-rc1` conserva o instalador de 05/10.
+- A próxima pré-release é outra tag. Este repositório recebe a página e os assets; a central `caracore-loja` e a matriz acompanham no mesmo corte. A oficina privada só vai ao remoto quando o dono pedir.
+
 ## Mensagem honesta
 - Vitrine e artefatos WAR de **pré-lançamento** já públicos.
 - GA do instalador Windows: **06/04/2027**. Não publicar `download.html` como se o EXE de GA já existisse.
