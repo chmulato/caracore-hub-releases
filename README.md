@@ -2,7 +2,7 @@
 
 Repositório público de **delivery** e **vitrine** do **CaraCore Hub**: plataforma de gestão logística e automação para e-commerce da Cara Core Informática.
 
-**Foco do lançamento:** banco **SQLite** local, **autonomia local** (proteção contra instabilidade da internet). O instalador Windows está previsto para **06/04/2027**. A oficina web atual continua sendo distribuída como WAR e usa PostgreSQL no desenvolvimento.
+**Foco do lançamento:** banco **SQLite** local, **autonomia local** (proteção contra instabilidade da internet). O instalador Windows está previsto para **06/04/2027**. A oficina web é o mesmo WAR no Tomcat, com SQLite local.
 
 ---
 
@@ -12,10 +12,10 @@ O **CaraCore Hub** é um sistema de gestão para centros de distribuição:
 
 - Recebimento de pedidos, triagem, alocação em posições de estoque, mapa de ocupação, retirada.
 - Integração com marketplaces (webhooks e API).
-- Banco de dados **SQLite** no instalador Windows futuro — sem dependência de PostgreSQL no computador do cliente.
+- Banco de dados **SQLite** local no computador do cliente.
 - Deploy como **WAR** em Tomcat.
 
-A pré-release Windows <code>v2.1.0-rc1.2</code> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não é o GA. O instalador estável segue planejado para 06/04/2027. A tag <code>v2.1.0-rc1.1</code> permanece com o pacote de 06/10/2026 e a tag <code>v2.1.0-rc1</code> permanece com o pacote de 05/10/2026. A oficina web continua como WAR, com PostgreSQL.
+A pré-release Windows <code>v2.1.0-rc1.2</code> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não é o GA. O instalador estável segue planejado para 06/04/2027. A tag <code>v2.1.0-rc1.1</code> permanece com o pacote de 06/10/2026 e a tag <code>v2.1.0-rc1</code> permanece com o pacote de 05/10/2026. A oficina web continua como WAR, com SQLite local.
 
 O desenvolvimento está no repositório **caracore-hub**. Este repositório (**caracore-hub-releases**) é o canal **público** de vitrine e, quando aplicável, artefatos de release (Releases no GitHub). O exemplo Tias Sócias é apenas um cenário ilustrativo de aplicação em última milha; não é produto, case ou prova de mercado.
 
