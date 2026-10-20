@@ -17,9 +17,10 @@ alwaysApply: true
 - FileVersion `2.1.0-rc1.2`. Manifesto do commit `463a854`, árvore limpa. Não é GA.
 - `v2.1.0-rc1.1` conserva o pacote de 06/10. `v2.1.0-rc1` conserva o instalador de 05/10.
 - A próxima pré-release é outra tag. Este repositório recebe a página e os assets; a central `caracore-loja` e a matriz acompanham no mesmo corte. A oficina privada só vai ao remoto quando o dono pedir.
+- **20/10/2026:** README, `RELEASE_2.1.0-rc1.md` e nota de leitura no laudo de 19/09 alinhados à aplicação web 2.1 (Tomcat embutido no instalador, SQLite local); `WAR`/`oficina` fora do texto público. Commit `ceb7a51`. Sem tag ou asset novo; o `WAR` continua como artefato interno de build.
 
 ## Mensagem honesta
-- Vitrine e artefatos WAR de **pré-lançamento** já públicos.
+- Vitrine e artefatos de **pré-lançamento** já públicos (instalador e ZIP da `v2.1.0-rc1.2`).
 - GA do instalador Windows: **06/04/2027**. Não publicar `download.html` como se o EXE de GA já existisse.
 - O banco do Hub é SQLite local (WAL), na oficina e na pré-release. Java 25, Jakarta EE 10, Tomcat 10.1.
 - Não descrever como Flask ou “cérebro da Cara Core”. Tia Sócia = pitch.
