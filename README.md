@@ -2,7 +2,7 @@
 
 Repositório público de **delivery** e **vitrine** do **CaraCore Hub**: gestão logística interna para pontos de retirada (PUDOs) da Cara Core Informática.
 
-**Foco do lançamento:** banco **SQLite** local, **autonomia local** (proteção contra instabilidade da internet). O instalador Windows está previsto para **06/04/2027**. A oficina web é o mesmo WAR no Tomcat, com SQLite local.
+**Foco do lançamento:** banco **SQLite** local, **autonomia local** (proteção contra instabilidade da internet). O GA do instalador Windows está previsto para **06/04/2027**. A pré-release atual já leva **Tomcat** embutido e SQLite local: a aplicação web 2.1 abre no computador do ponto de retirada.
 
 ---
 
@@ -13,9 +13,9 @@ O **CaraCore Hub** é um sistema de gestão logística interna para **pontos de 
 - Recebimento de encomendas, conferência, alocação em posições de estoque, mapa de ocupação e retirada no balcão.
 - Conectores com **Mercado Livre**, **Shopee** e **Temu** (webhooks e API), além da entrada manual. Amazon e B2W não têm conector nesta edição.
 - Banco de dados **SQLite** local no computador do cliente.
-- Deploy como **WAR** em Tomcat.
+- Aplicação web 2.1 sobre **Tomcat**, embutido no instalador Windows.
 
-A pré-release Windows <code>v2.1.0-rc1.2</code> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não é o GA. O instalador estável segue planejado para 06/04/2027. A tag <code>v2.1.0-rc1.1</code> permanece com o pacote de 06/10/2026 e a tag <code>v2.1.0-rc1</code> permanece com o pacote de 05/10/2026. A oficina web continua como WAR, com SQLite local.
+A pré-release Windows <code>v2.1.0-rc1.2</code> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não é o GA. O instalador estável segue planejado para 06/04/2027. A tag <code>v2.1.0-rc1.1</code> permanece com o pacote de 06/10/2026 e a tag <code>v2.1.0-rc1</code> permanece com o pacote de 05/10/2026. O instalador e a aplicação web 2.1 usam o mesmo banco SQLite local, no computador do ponto de retirada.
 
 O desenvolvimento está no repositório **caracore-hub**. Este repositório (**caracore-hub-releases**) é o canal **público** de vitrine e, quando aplicável, artefatos de release (Releases no GitHub). O exemplo Tias Sócias é apenas um cenário ilustrativo de aplicação em última milha; não é produto, case ou prova de mercado.
 
@@ -26,7 +26,7 @@ O desenvolvimento está no repositório **caracore-hub**. Este repositório (**c
 | Onde   | O que tem |
 |--------|-----------|
 | **docs/** | Páginas publicadas no GitHub Pages: **index.html**, **download.html**, **canal-feedback.html**, **tecnologia.html** e assets da loja. |
-| **Releases** | Quando publicadas: artefatos de deploy (WAR, instruções) em [Releases](https://github.com/chmulato/caracore-hub-releases/releases). |
+| **Releases** | Quando publicadas: instalador Windows, ZIP da mesma edição e instruções em [Releases](https://github.com/chmulato/caracore-hub-releases/releases). |
 
 ---
 

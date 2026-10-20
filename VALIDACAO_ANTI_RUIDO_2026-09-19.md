@@ -3,6 +3,8 @@
 **Data:** 2026-09-19  
 **Escopo:** loja `caracore-hub-releases`, incluindo raiz, `docs/` e pitch Tia Sócia.
 
+> **Nota de leitura (20/10/2026):** este documento registra o estado observado em 19/09/2026 e é mantido como histórico. As páginas públicas hoje descrevem a aplicação web 2.1 executada sobre Tomcat embutido no instalador, com SQLite local; o WAR citado abaixo era o artefato de build usado naquela data.
+
 ## Resultado geral
 
 **GO.** A promessa principal da loja está alinhada ao ecossistema: WAR/oficina atual separado do instalador Windows futuro, Java 25 definido como stack, SQLite/Bunker associado ao GA de 06/04/2027 e ausência de EXE publicado declarada.

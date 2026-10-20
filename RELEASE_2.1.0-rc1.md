@@ -17,7 +17,7 @@ O primeiro uso cria o administrador na tela de setup. Não há senha compartilha
 
 - Avaliação em perfil novo. Não é o instalador de produção previsto para 06/04/2027.
 - Atualização sobre uma versão anterior, backup e restauração não fazem parte deste aceite.
-- Código do binário: `46d1599e81dda58048f1a35250d025d5f0e3c782` na oficina `caracore-hub`.
+- Código do binário: `46d1599e81dda58048f1a35250d025d5f0e3c782` no repositório privado `caracore-hub`.
 - O instalador grava `%LOCALAPPDATA%\CaraCore Hub\install.log` e avisa se o destino estiver em pasta temporária ou no OneDrive.
 - A causa do crash `0xC0000005` observado no instalador anterior não está confirmada. A suíte 9/9 foi executada no asset anterior (`f59b959d34c97f5048ebf2cfaadeb42a7e5b7d84597b15db00d790779def29ae`, 285.746.041 bytes), substituído por este arquivo na mesma tag.
 
