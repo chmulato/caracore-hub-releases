@@ -1,6 +1,6 @@
 # CaraCore Hub — Releases e vitrine
 
-Repositório público de **delivery** e **vitrine** do **CaraCore Hub**: plataforma de gestão logística e automação para e-commerce da Cara Core Informática.
+Repositório público de **delivery** e **vitrine** do **CaraCore Hub**: gestão logística interna para pontos de retirada (PUDOs) da Cara Core Informática.
 
 **Foco do lançamento:** banco **SQLite** local, **autonomia local** (proteção contra instabilidade da internet). O instalador Windows está previsto para **06/04/2027**. A oficina web é o mesmo WAR no Tomcat, com SQLite local.
 
@@ -8,10 +8,10 @@ Repositório público de **delivery** e **vitrine** do **CaraCore Hub**: platafo
 
 ## O que é o CaraCore Hub?
 
-O **CaraCore Hub** é um sistema de gestão para centros de distribuição:
+O **CaraCore Hub** é um sistema de gestão logística interna para **pontos de retirada (PUDOs)**:
 
-- Recebimento de pedidos, triagem, alocação em posições de estoque, mapa de ocupação, retirada.
-- Integração com marketplaces (webhooks e API).
+- Recebimento de encomendas, conferência, alocação em posições de estoque, mapa de ocupação e retirada no balcão.
+- Conectores com **Mercado Livre**, **Shopee** e **Temu** (webhooks e API), além da entrada manual. Amazon e B2W não têm conector nesta edição.
 - Banco de dados **SQLite** local no computador do cliente.
 - Deploy como **WAR** em Tomcat.
 

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://hub.caracore.com.br/">
-    <title>CaraCore Hub — Gestão logística e e-commerce | Cara Core Informática</title>
-    <meta name="description" content="CaraCore Hub: plataforma de gestão logística e automação para e-commerce. SQLite local, autonomia local. Integração com marketplaces. Cara Core Informática.">
+    <title>CaraCore Hub — Gestão logística para pontos de retirada (PUDO) | Cara Core Informática</title>
+    <meta name="description" content="CaraCore Hub: gestão logística interna para pontos de retirada (PUDOs). Recebimento, guarda e retirada de encomendas com SQLite local. Integrações com Mercado Livre, Shopee e Temu. Cara Core Informática.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,8 +33,8 @@
         <!-- Hero: o que é, valor e CTA em poucos segundos -->
         <section class="hero-cta" aria-label="O que é o CaraCore Hub?">
             <p class="hero-label">O que é o CaraCore Hub?</p>
-            <h2 class="hero-title">Gestão logística e e-commerce para centros de distribuição — recebimento, triagem, estoque, retirada e integração com marketplaces.</h2>
-            <p class="hero-desc">O <strong>CaraCore Hub 2.1</strong> organiza pedidos, estoque, etiquetas, inventário e retirada para centros de distribuição, com integrações com Mercado Livre, Shopee e Temu. Os dados ficam em <strong>SQLite local</strong> no computador do cliente. A pré-release Windows v2.1.0-rc1.2 está publicada para avaliação, sem assinatura. O GA permanece em 06/04/2027.</p>
+            <h2 class="hero-title">Receba, guarde e entregue as encomendas do seu ponto de retirada — com controle local.</h2>
+            <p class="hero-desc">O <strong>CaraCore Hub 2.1</strong> organiza o dia a dia de um <strong>PUDO</strong> (ponto de retirada e entrega): recebimento, conferência, guarda por posição, etiquetas e retirada conferida volume a volume. As encomendas chegam do Mercado Livre, da Shopee e da Temu. Os dados ficam em <strong>SQLite local</strong> no computador do cliente. A pré-release Windows v2.1.0-rc1.2 está publicada para avaliação, sem assinatura. O GA permanece em 06/04/2027.</p>
             <div class="cta-buttons">
                 <a href="download.html" class="cta-btn cta-btn-primary">Baixar pré-release Windows</a>
                 <a href="https://wiki.caracore.com.br/projeto-hub.html" class="cta-btn cta-btn-secondary">Wiki da aplicação</a>
@@ -43,21 +43,44 @@
 
         <header>
             <h1>CaraCore Hub</h1>
-            <p class="subtitle">Aplicação web 2.1 concluída. Pré-release Windows v2.1.0-rc1.2 para avaliação. GA do instalador em 06/04/2027.</p>
+            <p class="subtitle">Gestão logística interna para pontos de retirada. Aplicação web 2.1 concluída. Pré-release Windows v2.1.0-rc1.2 para avaliação. GA do instalador em 06/04/2027.</p>
         </header>
 
         <section class="methodology">
             <div class="card">
                 <h2>O que é o CaraCore Hub?</h2>
-                <p>O <strong>CaraCore Hub 2.1</strong> é um sistema de gestão para centros de distribuição e operações de e-commerce: pedidos, triagem, alocação, mapa de ocupação, etiquetas, inventário, retirada e integrações com Mercado Livre, Shopee e Temu. A pré-release Windows está disponível para avaliação. A vitrine não vende um SaaS público.</p>
+                <p>O <strong>CaraCore Hub 2.1</strong> é o sistema de balcão de um ponto de retirada: recebe a encomenda, confere e etiqueta, guarda em uma posição identificada e entrega ao destinatário com conferência de volume. O mapa de ocupação, o inventário e a auditoria ficam no mesmo lugar. A vitrine não vende um SaaS público.</p>
             </div>
             <div class="card card-differential">
                 <h2>Autonomia local</h2>
                 <p>O banco do Hub é <strong>SQLite local, em modo WAL</strong>, no computador do cliente. A pré-release Windows leva Electron e Tomcat embutido. As migrações dessa base foram validadas na oficina. O GA dessa oferta permanece em 06/04/2027.</p>
             </div>
             <div class="card card-differential">
-                <h2>Negócios aplicáveis</h2>
-                <p>O CaraCore Hub é aplicável a operações de e-commerce e centros de distribuição. O <strong>Programa Tias Sócias</strong> fica disponível apenas como cenário ilustrativo de última milha; não é produto, case ou prova de mercado. <a href="slides/apresentacao_tia_socia.html" style="color: var(--accent-blue);">Ver cenário ilustrativo</a>.</p>
+                <h2>Para quem é</h2>
+                <p>Para quem já recebe encomendas de terceiros e entrega no balcão: <strong>pontos de retirada (PUDOs)</strong>, lojas de bairro, papelarias, mercados e operações de última milha que precisam de controle local em vez de planilha. O <strong>Programa Tias Sócias</strong> fica disponível apenas como cenário ilustrativo de última milha; não é produto, case ou prova de mercado. <a href="slides/apresentacao_tia_socia.html" style="color: var(--accent-blue);">Ver cenário ilustrativo</a>.</p>
+            </div>
+        </section>
+
+        <section class="methodology" aria-label="De onde vêm as encomendas">
+            <div class="card">
+                <h2>De onde vêm as encomendas</h2>
+                <p>O Hub não substitui o marketplace: ele recebe a encomenda que já foi vendida e organiza o que acontece no balcão do ponto de retirada. Nesta edição há conector para três canais e entrada manual.</p>
+            </div>
+            <div class="card">
+                <h2>Mercado Livre</h2>
+                <p>Webhook e conector trazem o pedido, a etiqueta e o status para a fila de recebimento.</p>
+            </div>
+            <div class="card">
+                <h2>Shopee</h2>
+                <p>Mesmo fluxo: pedido e etiqueta entram na fila e seguem para recebimento, guarda e retirada.</p>
+            </div>
+            <div class="card">
+                <h2>Temu</h2>
+                <p>Conector próprio, com worker de importação e atualização de status.</p>
+            </div>
+            <div class="card">
+                <h2>Amazon e B2W</h2>
+                <p>Sem conector nesta edição. Não aparecem no filtro de canais e não são oferecidos como integração.</p>
             </div>
         </section>
 
@@ -99,7 +122,7 @@
                     </svg>
                 </span>
                 <h3>Manual de uso</h3>
-                <p>Como usar a aplicação web da oficina: login, pedidos, estoque e administração.</p>
+                <p>Primeiro acesso, recebimento, guarda, retirada e administração do ponto de retirada.</p>
             </a>
             <div class="nav-card" style="cursor:default;" role="text">
                 <span class="icon" aria-hidden="true">
@@ -123,7 +146,7 @@
 
         <footer>
             <p><a href="index.html">CaraCore Hub — Loja</a> · <a href="https://www.caracore.com.br/portfolio.html#caracore-hub" rel="noopener">Portfólio Cara Core</a></p>
-            <p>CaraCore Hub — gestão logística e e-commerce. SQLite local, autonomia local.</p>
+            <p>CaraCore Hub — gestão logística interna para pontos de retirada (PUDOs). SQLite local, autonomia local.</p>
             <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
         </footer>
     </div>

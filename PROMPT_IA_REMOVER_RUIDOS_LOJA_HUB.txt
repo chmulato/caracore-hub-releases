@@ -3,7 +3,7 @@ PROMPT — IA: remover ruídos da loja CaraCore Hub
 
 Contexto
 --------
-Produto: CaraCore Hub (gestão de encomendas, centros de distribuição e e-commerce)
+Produto: CaraCore Hub (gestão logística interna para pontos de retirada — PUDOs)
 Oficina: caracore-hub (privado)
 Loja: caracore-hub-releases -> https://hub.caracore.com.br/
 Wiki: https://wiki.caracore.com.br/projeto-hub.html

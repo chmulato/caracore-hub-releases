@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://hub.caracore.com.br/">
     <title>Tecnologia — CaraCore Hub | Cara Core Informática</title>
-    <meta name="description" content="Stack do CaraCore Hub: Java/Jakarta EE, SQLite, Tomcat. Bunker Digital, soberania local, operação antifrágil.">
+    <meta name="description" content="Stack do CaraCore Hub: Java/Jakarta EE, SQLite, Tomcat. Controle local do ponto de retirada (PUDO).">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
 
         <header>
             <h1>Tecnologia — CaraCore Hub</h1>
-            <p>Soberania local, operação antifrágil, Bunker Digital</p>
+            <p>Stack local para a operação de um ponto de retirada (PUDO)</p>
         </header>
 
         <section class="card">
@@ -52,7 +52,7 @@
 
         <section class="card">
             <h2>Estado da aplicação web</h2>
-            <p>A versão <strong>2.1</strong> está concluída na oficina como WAR para Tomcat, com pedidos, estoque, etiquetas, inventário, retirada, auditoria e RBAC nos perfis <strong>ADMIN, SUPERVISOR e OPERADOR</strong>.</p>
+            <p>A versão <strong>2.1</strong> está concluída na oficina como WAR para Tomcat, cobrindo o fluxo do ponto de retirada: recebimento, conferência e etiqueta, guarda por posição, retirada por volume, inventário e auditoria, com RBAC nos perfis <strong>ADMIN, SUPERVISOR e OPERADOR</strong>.</p>
         </section>
 
         <section class="card">
@@ -63,8 +63,8 @@
         </section>
 
         <section class="card">
-            <h2>Integrações e cache</h2>
-            <p>Integração com marketplaces (Mercado Livre, Shopee, Temu) via API e webhooks. Notificações por WhatsApp quando configuradas. <strong>Redis</strong> é opcional no ambiente web da oficina; ele não faz parte da dependência obrigatória do instalador futuro.</p>
+            <h2>De onde vêm as encomendas</h2>
+            <p>Conectores com <strong>Mercado Livre</strong>, <strong>Shopee</strong> e <strong>Temu</strong> via API e webhooks, além da entrada manual no balcão. <strong>Amazon</strong> e <strong>B2W</strong> não têm conector nesta edição: permanecem apenas no modelo de dados e não aparecem no filtro de canais. Notificações por WhatsApp quando configuradas. <strong>Redis</strong> é opcional no ambiente web da oficina; ele não faz parte da dependência obrigatória do instalador futuro.</p>
         </section>
 
         <nav class="back">
