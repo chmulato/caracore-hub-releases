@@ -15,7 +15,7 @@ O **CaraCore Hub** é um sistema de gestão logística interna para **pontos de 
 - Banco de dados **SQLite** local no computador do cliente.
 - Aplicação web 2.1 sobre **Tomcat**, embutido no instalador Windows.
 
-A pré-release Windows <code>v2.1.0-rc1.6</code> está publicada para avaliação, sem assinatura digital, com instalador e ZIP. Não é o GA. O instalador estável segue planejado para 06/04/2027. A tag <code>v2.1.0-rc1.2</code> permanece com o pacote de 08/10/2026, a <code>v2.1.0-rc1.1</code> com o de 06/10/2026 e a <code>v2.1.0-rc1</code> com o instalador de 05/10/2026. O instalador e a aplicação web 2.1 usam o mesmo banco SQLite local, no computador do ponto de retirada. Notas desta RC: <code>RELEASE_2.1.0-rc1.6.md</code>.
+A pré-release Windows <code>v2.1.0-rc1.7</code> está publicada para avaliação, sem assinatura digital, com instalador e ZIP. Não é o GA. O instalador estável segue planejado para 06/04/2027. A tag <code>v2.1.0-rc1.6</code> permanece com o pacote de 25/10/2026, a <code>v2.1.0-rc1.2</code> com o de 08/10/2026, a <code>v2.1.0-rc1.1</code> com o de 06/10/2026 e a <code>v2.1.0-rc1</code> com o instalador de 05/10/2026. O instalador e a aplicação web 2.1 usam o mesmo banco SQLite local, no computador do ponto de retirada. Notas desta RC: <code>RELEASE_2.1.0-rc1.7.md</code>.
 
 **Modelo comercial (20/10/2026):** o Hub é **Free** — não há licença mensal pelo produto. A pré-release atual é de avaliação e não é cobrada. O **suporte** é opcional e tem **pagamento recorrente de R$ 79,90/mês**, o mesmo valor do PDV Premium, a partir do GA. O suporte cobre a operação do ponto e as integrações com Mercado Livre, Shopee e Temu.
 
