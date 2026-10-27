@@ -1,0 +1,20 @@
+/* CaraCore Hub — ajustes de marca por cima de portal-style.css (herdado do portal do PDV).
+   Só variáveis, gradiente e o enquadramento das capturas de tela; o layout vem de portal-style.css. */
+
+:root {
+  --brand-a: #1e1b4b;
+  --brand-b: #312e81;
+  --brand-c: #6d28d9;
+  --green: #4f46e5;
+  --green2: #7c3aed;
+}
+
+.hub-bg { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); }
+.hub-accent { color: #4f46e5; }
+.hub-chip { background: linear-gradient(135deg, rgba(124, 58, 237, 0.14) 0%, rgba(79, 70, 229, 0.08) 100%); color: #4f46e5; }
+.portal-hero.hub-hero { box-shadow: 0 24px 60px rgba(30, 27, 75, 0.28); }
+
+/* Capturas do produto: mesma proporção (16:10) para os três passos ficarem alinhados. */
+figure.hub-shot { background: #f8fafc; }
+figure.hub-shot picture { display: block; }
+figure.hub-shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; }

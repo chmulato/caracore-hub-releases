@@ -1,0 +1,189 @@
+ACCEPTANCE REPORT — CaraCore Hub STORE PAGES (portal rewrite)
+Date: 27/10/2026
+Repo: caracore-hub-releases (GitHub Pages -> hub.caracore.com.br)
+Branch: loja/portal-pdv-20261027
+Scope: docs/index.html, docs/download.html, docs/tecnologia.html, docs/canal-feedback.html
+       + docs/assets/css/portal-style.css (metric-compatible font fallback)
+
+1. WHY THIS ROUND EXISTED
+The four store pages were rewritten onto the portal layout (breadcrumb + hero +
+footer) and the technical jargon was consolidated into tecnologia.html. This
+round is the acceptance QA of that rewrite: links, responsiveness, SEO, jargon,
+markup, inbound links and honest N1/N2/Free wording.
+
+2. VERSION SURFACED IN THE COPY
+  Public pré-release: v2.1.0-rc1.7 (Pre-release, not Latest, not GA)
+  Installer: 274.162.562 B  SHA-256 1563f1bd343b0044f9a64dd9bb7d3a1604761ee7f1e2354e8663b693cb310ba1
+  ZIP:       324.502.796 B  SHA-256 924af1960ccda606e4b3979ff36741f7e78228f8f77c396ccb985878b940b37e
+  GA Windows: 06/04/2027 — not delivered, never claimed as delivered.
+
+3. WHAT THIS ROUND CHANGED
+   a) Font/CLS: docs/assets/css/portal-style.css gained a metric-compatible
+      @font-face ('Inter Fallback', Arial, size-adjust:107% with ascent/descent/
+      line-gap overrides) and body now uses 'Inter','Inter Fallback',... ; the
+      four pages changed Google Fonts display=swap -> display=optional.
+      Effect: swap period no longer shifts text (see section 5).
+   b) A11y: 5 inline links in download.html got underline (a11y 95 -> 100).
+   c) Copy correction in download.html (the "still does not do" list): the item
+      used to say "A retirada ainda não confere cada volume, um a um". That was
+      factually wrong — the packaged app DOES confer per volume:
+        - web/src/main/webapp/retirada/retirar.jsp:183-186 — one checkbox per
+          volume, name="volumeId", disabled unless the volume is PRONTO;
+        - web/.../servlet/RetiradaServlet.java:72-86 — the checked ids are posted
+          to PedidoService.registrarRetirada(pedidoId, volumesConferidos, user);
+        - persistence/.../PedidoService.java:107-117 — the order only closes when
+          every pending volume was conferred;
+        - api/.../PedidoResource.java:277 — POST /api/pedidos/{id}/retirada/conferencia
+          (and /{id}/retirada/scan -> registrarRetiradaVolume at :239-255).
+      New text (download.html:136): "A leitura por leitor de código de barras não
+      foi testada com equipamento nesta pré-release. A conferência pela tela é por
+      volume: cada volume tem a sua caixa e o pedido só fecha quando todos forem
+      marcados." — it states the limitation (no hardware test) without denying the
+      capability and without claiming acceptance that was never run.
+   d) Removed docs/_dbg_download.html (debug copy that Pages would have served).
+
+4. QA BATTERY (all re-run after the edit above)
+
+   Check                      Result
+   -------------------------  ------------------------------------------------
+   Markup (tag balance, 4 pg) 0 errors / 0 unclosed  (tags-r3.out)
+   Local refs (src/href)      0 missing              (aceite-r3.out)
+   Internal anchors           0 broken; all targets exist (aceite-r3.out)
+   Inbound links to the store 0 suspects across caracore-wiki, caracore-site,
+                              caracore-loja, caracore-hub-releases (inbound-r3.out)
+   External links             24 URLs: 22 x 200; the 2 x 404 are the bare
+                              preconnect origins fonts.googleapis.com and
+                              fonts.gstatic.com (not document links)
+                              (link-r3.out + linkcheck.out)
+   Responsiveness             7 widths x 4 pages (320/360/390/414/768/1024/1440):
+                              28/28 without horizontal overflow (resp-r3.out)
+   Jargon outside tecnologia  0 hits ("oficina", "garagem", WAL, WAR, Tomcat,
+                              "Tia Sócia", "roadmap", "hipótese") (aceite-r3.out)
+   SEO head                   4/4 with title, description <=160, canonical,
+                              og:title/og:image, viewport, lang="pt-BR"
+   Screenshots (png/webp)     6/6 present, webp served through <picture>
+   Amazon/B2W                 4/4 mentions are the qualified ones: "não têm
+                              conector nesta edição" (amz-r3.out)
+   "Não homologada"           stated in the 4 pages (hero/footer) and in the
+                              download card (see section 6)
+
+5. LIGHTHOUSE (mobile emulation, Edge, local http.server, single run each)
+
+   Three runs, all 27/10/2026:
+     lh-*  20:08-20:22Z  before the link underline and before the font fix
+     lh2-* 20:26Z        after the underline, still with display=swap
+     lh3-* 20:29-20:30Z  final state (underline + fallback font + display=optional)
+
+   Page              run    perf  a11y  bp   seo   CLS     LCP
+   ----------------  -----  ----  ----  ---  ----  ------  -----
+   index.html        lh      74   100   100  100   0.057   4.5 s
+                     lh2     76   100   100  100   0.006   3.0 s
+                     lh3     83   100   100  100   0       3.0 s
+   download.html     lh      85    95   100  100   0.082   2.6 s
+                     lh2     91   100   100  100   0.100   2.4 s
+                     lh3     88   100   100  100   0       3.0 s
+   tecnologia.html   lh      83   100   100  100   0.005   2.8 s
+                     lh3     76   100   100  100   0      4.1 s
+   canal-feedback    lh      71   100   100  100   0       4.8 s
+                     lh3     73   100   100  100   0      4.5 s
+
+   Reading: accessibility is 100 on all four pages and in every run after the
+   underline fix (download was 95 before it). CLS ends at 0 on all four; the only
+   layout shift left before the font fix was the Inter swap (0.057 / 0.082 / 0.100
+   in consecutive runs, i.e. the same defect measured with run-to-run noise), and
+   it disappears once the metric-compatible fallback is in place. Performance
+   figures are pessimistic by construction: python -m http.server serves without
+   gzip and without cache headers, so uses-text-compression, uses-long-cache-ttl
+   and cache-insight are red no matter what the page does; GitHub Pages gzips and
+   caches the same static files. What remains real and out of this round's scope:
+   render-blocking Tailwind CDN + Font Awesome CDN, and image-delivery on the
+   full-size screenshots (portal-wide decision).
+
+   Note on timing: the Lighthouse runs above predate the copy correction of 3.c
+   (text-only swap inside one <li>), which therefore has no font, image or layout
+   effect; the markup/anchor/link/responsiveness battery was re-run on the final
+   text (section 4).
+
+6. HONEST WORDING AUDIT (N1 / N2 / Free)
+   Kept out of the store on purpose, because no evidence supports them:
+   - no "conferência volume a volume homologada" (the capability exists in code,
+     the hardware acceptance was never run — see 3.c);
+   - no scanner/barcode claim with equipment;
+   - no Amazon/B2W as working channels anywhere (all 4 mentions qualified);
+   - no Free-tier limit numbers: the owner has not decided them, so the copy says
+     "Escopo e limites da edição Free são publicados até o GA";
+   - no #economia / savings section: there is no sourced figure to publish;
+   - no claim of GA, no "em produção", no demo availability promise.
+   What is stated and is verifiable:
+   - v2.1.0-rc1.7, Pre-release, unsigned, not homologated, GA 06/04/2027;
+   - installer 274.162.562 B and ZIP 324.502.796 B with the two SHA-256, both
+     reachable at the release (link check: 200);
+   - Free = R$ 0 for the product; support at R$ 79,90/month only from the GA,
+     first answer within 24 h.
+   - index.html:195/208/217 — "O produto é Free. O suporte é opcional e pago à
+     parte" + "Escopo e limites da edição Free são publicados até o GA", so the
+     page never invents a limit that the owner has not decided.
+   - index.html:231-240 (#demo) invites the visitor to install and evaluate the
+     pre-release; it does not promise a scheduled in-person demo.
+
+7. OPEN POINTS THAT ARE OWNER DECISIONS, NOT QA DEFECTS
+   a) Free edition limits — no number was published anywhere; the copy defers to
+      the GA. Nothing to fix until the owner decides.
+   b) #economia (savings) — omitted on purpose; there is no sourced figure.
+   c) In-person demo — the page stays on "install and evaluate"; whether the
+      owner wants to offer a supervised demo is still open.
+   Once any of these is decided, the change is copy-only in index.html and
+   download.html and does not need a new package.
+
+8. WHAT THIS ROUND DID NOT TEST (do not read as approved)
+   - The pages were served locally (python -m http.server 8099, 127.0.0.1), not
+     from GitHub Pages; the deployed headers (gzip, cache) were not measured.
+   - Lighthouse ran on Edge/Chromium mobile emulation only; no Firefox or Safari.
+   - No screen-reader pass, no axe/pa11y run beyond what Lighthouse covers.
+   - The three screenshots are the product's own captures; they were checked for
+     dimensions and format, not re-verified against the rc1.7 runtime.
+   - Nothing here homologates the product: the Hub stays a Pre-release, not
+     homologated, GA 06/04/2027.
+
+9. HOW TO REPRODUCE
+   start the local server:
+     python -m http.server 8099 --bind 127.0.0.1 --directory D:\onedrive\dev\caracore-hub-releases\docs
+   battery (outputs in D:\temp\hub-loja-qa-20261027):
+     python aceite_loja.py      -> aceite-r3.out
+     python validate_loja.py    -> valid-r3.out
+     python anchors.py          -> anchors-r3.out
+     python inbound2.py         -> inbound-r3.out
+     python amz.py              -> amz-r3.out
+     python tagcheck.py         -> tags-r3.out
+     python imgsize.py          -> imgsize-r3.out
+     python resp.py             -> resp-r3.out (Playwright/Edge, 7 widths)
+     python linkcheck.py        -> link-r3.out (stdout) + linkcheck.out (per URL)
+   lighthouse (per page):
+     npx -y lighthouse@12 http://127.0.0.1:8099/download.html --output=json \
+       --output-path=lh3-download.json --chrome-flags="--headless=new" --only-categories=performance,accessibility,best-practices,seo
+     python lhsum.py            -> lhsum4.out (reads lh*.json)
+
+10. FILES CHANGED IN THIS ROUND AND PUBLISH STATE
+   M docs/index.html            (SEO head, portal layout, honest wording)
+   M docs/download.html         (SEO head, a11y underlines, free card -> index#planos,
+                                 limitation rewritten per 3.c)
+   M docs/tecnologia.html       (jargon consolidated here, Redis wording)
+   M docs/canal-feedback.html   (SEO head, portal layout)
+   A docs/assets/css/portal-style.css   (font fallback for CLS)
+   A docs/assets/css/hub-theme.css
+   A docs/assets/img/hub_tela_0{1,2,3}_*.{png,webp}  (6 files)
+   - docs/_dbg_download.html    removed from the working tree; it was never
+                                 tracked by git, so nothing to delete in history
+   A qa/aceite-loja-2026-10-27.txt  (this report — kept outside docs/ on purpose:
+                                 GitHub Pages publishes the whole docs/ folder, and
+                                 an internal QA note must not become a public URL)
+
+   Commit on branch loja/portal-pdv-20261027 (git log -1), local, not pushed
+   (amending this report changes the hash, so read the hash from git, not here).
+   GitHub Pages serves docs/ on master; nothing in this round is published — the
+   live store still serves what was pushed for rc1.7, and this branch must not be
+   pushed before the owner reviews sections 7 and 8.
+
+
+
+

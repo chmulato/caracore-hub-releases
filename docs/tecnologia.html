@@ -3,62 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://hub.caracore.com.br/">
     <title>Tecnologia — CaraCore Hub | Cara Core Informática</title>
-    <meta name="description" content="Stack do CaraCore Hub: Java/Jakarta EE, SQLite, Tomcat. Controle local do ponto de retirada (PUDO).">
+    <meta name="description" content="Java 25, Jakarta EE 10, Tomcat embutido e SQLite local: a pilha do CaraCore Hub no computador do ponto, sem nuvem obrigatória.">
+    <meta name="author" content="Cara Core Informática">
+    <meta property="og:title" content="Tecnologia — CaraCore Hub">
+    <meta property="og:description" content="Java 25, Jakarta EE 10, Tomcat embutido e SQLite local: a pilha do CaraCore Hub no computador do ponto de retirada.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://hub.caracore.com.br/tecnologia.html">
+    <meta property="og:image" content="https://hub.caracore.com.br/assets/img/hub_tela_02_mapa.png">
+    <meta property="og:image:alt" content="Mapa de posições do CaraCore Hub, com ruas, módulos e posições ocupadas">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://hub.caracore.com.br/tecnologia.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/hub-theme.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <meta name="theme-color" content="#4f46e5">
 </head>
-<body class="page-tecnologia">
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">CaraCore Hub — Loja</a>
-            <span> · </span>
-            <a href="index.html">CaraCore Hub</a>
-            <span> · </span>
-            <span>Tecnologia</span>
+<body class="smooth-scroll bg-gray-50">
+    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
+        <a href="https://www.caracore.com.br/" class="hover:text-indigo-600">Cara Core Informática</a>
+        <span> · </span>
+        <a href="index.html" class="hover:text-indigo-600">CaraCore Hub</a>
+        <span> · </span>
+        <span class="text-gray-900">Tecnologia</span>
+    </nav>
+
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 hub-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-boxes-stacked text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore Hub</p>
+                        <p class="text-xs text-gray-600">Gestão do ponto de retirada</p>
+                    </div>
+                </a>
+                <div id="mobile-menu" class="hidden lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white p-4 lg:p-0 flex-col lg:flex-row gap-3 lg:gap-6 lg:items-center">
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-indigo-600 font-medium transition">Como funciona</a>
+                    <a href="index.html#dores" class="text-gray-700 hover:text-indigo-600 font-medium transition">O que resolvemos</a>
+                    <a href="index.html#origens" class="text-gray-700 hover:text-indigo-600 font-medium transition">Canais</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-indigo-600 font-medium transition">Planos</a>
+                    <a href="download.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">Versões e download</a>
+                    <a href="download.html" class="hub-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">
+                        Baixar pré-release
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
         </nav>
+    </header>
 
-        <header>
-            <h1>Tecnologia — CaraCore Hub</h1>
-            <p>Stack local para a operação de um ponto de retirada (PUDO)</p>
-        </header>
+    <section class="portal-hero hub-hero hub-bg text-white py-14 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-indigo-100 mb-3">Como o Hub roda</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Tecnologia</h1>
+                <p class="text-lg text-indigo-50">
+                    Java 25 e Jakarta EE 10 sobre um Tomcat que já vai dentro do instalador, com SQLite no computador do ponto. Sem servidor de banco para contratar e sem nuvem obrigatória.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <section class="card">
-            <h2>Backend</h2>
-            <p><strong>Java 25</strong> e <strong>Jakarta EE 10</strong>. Aplicação modular (core, persistence, api, web). Servidor de aplicações: <strong>Apache Tomcat 10.1</strong>. API REST (JAX-RS/Jersey) para integrações e front-end JSP para a interface de gestão.</p>
-        </section>
+    <section class="py-14 md:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">A pilha</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">Aplicação</h3>
+                        <p class="text-sm text-gray-600">Java 25 e Jakarta EE 10, em módulos separados de núcleo, persistência, API e interface. A interface é JSP e a API é REST (JAX-RS/Jersey), usada pelas telas e pelas integrações.</p>
+                    </div>
+                    <div class="rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">Servidor</h3>
+                        <p class="text-sm text-gray-600">Apache Tomcat 10.1 embutido no instalador Windows. Não é preciso instalar servidor nem configurar porta: o programa sobe o Tomcat local e abre a interface.</p>
+                    </div>
+                    <div class="rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">Banco de dados</h3>
+                        <p class="text-sm text-gray-600">SQLite local em modo WAL, no computador do ponto. O arquivo do banco fica na pasta do Hub, e a própria aplicação faz a cópia de segurança dele.</p>
+                    </div>
+                    <div class="rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">Pacote</h3>
+                        <p class="text-sm text-gray-600">Electron inicia o Tomcat e abre a janela do Hub. Dentro do pacote vão o Java 25 e o Tomcat: o computador do ponto não precisa de JDK instalado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="card">
-            <h2>Estado da aplicação web</h2>
-            <p>A versão <strong>2.1</strong> está concluída, ainda sem homologação, e roda sobre <strong>Tomcat</strong>, embutido no instalador Windows, cobrindo o fluxo do ponto de retirada: recebimento, conferência e etiqueta, guarda por posição, retirada por volume, inventário e auditoria, com perfis <strong>ADMIN, SUPERVISOR e OPERADOR</strong> nas telas da aplicação.</p>
-        </section>
+    <section class="py-14 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Perfis e permissões</h2>
+                <p class="text-gray-600 mb-8">Três perfis nas telas e nas rotas administrativas: <strong>ADMIN</strong>, <strong>SUPERVISOR</strong> e <strong>OPERADOR</strong>.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">ADMIN</h3>
+                        <p class="text-sm text-gray-600">Configuração, usuários, auditoria e logs. As rotas de administração respondem 200 para o ADMIN.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">SUPERVISOR</h3>
+                        <p class="text-sm text-gray-600">Operação do ponto com supervisão da equipe. Nas rotas de administração, a resposta é 403.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">OPERADOR</h3>
+                        <p class="text-sm text-gray-600">Recebimento, guarda, busca na lista e retirada no balcão. Também recebe 403 nas rotas de administração.</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-500 mt-6">A recusa por perfil sai em JSON, com mensagem de erro padronizada, e não como página HTML do servidor. A auditoria de usuários fica gravada em tabela própria e é lida em Administração → Auditoria e Logs.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="card">
-            <h2>Banco de dados</h2>
-            <p>O banco do Hub é <strong>SQLite local, em modo WAL</strong>, no computador do cliente. A pré-release Windows <strong>v2.1.0-rc1.7</strong> já leva <strong>Java 25 embutido</strong> e <strong>Tomcat local</strong> para avaliação. O GA desse instalador permanece em 06/04/2027.</p>
+    <section class="py-14 md:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">De onde vêm as encomendas</h2>
+                <div class="rounded-2xl border border-gray-200 p-6 md:p-8">
+                    <p class="text-gray-700 mb-4">Três conectores nesta edição, cada um com API e webhook: <strong>Mercado Livre</strong>, <strong>Shopee</strong> e <strong>Temu</strong>. Além deles, o balcão pode cadastrar qualquer encomenda manualmente.</p>
+                    <p class="text-gray-700 mb-4"><strong>Amazon</strong> e <strong>B2W</strong> não têm conector nesta edição: existem apenas no modelo de dados e não aparecem no filtro de canais.</p>
+                    <p class="text-gray-700">As notificações por WhatsApp dependem de configuração. O cache em Redis é opcional: o pacote Windows funciona sem um servidor Redis, e o estado do ponto fica no SQLite local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <p>A pré-release Windows usa <strong>Electron</strong> para iniciar o Tomcat local e abrir a interface. O pacote <strong>v2.1.0-rc1.7</strong> está na loja para avaliação e não é o GA.</p>
-        </section>
+    <section class="py-14 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">O que fica de fora</h2>
+                <p class="text-gray-600 mb-6">Para não confundir o que é produto com o que é etapa de build.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl border-l-4 border-indigo-400 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">O WAR é artefato interno</h3>
+                        <p class="text-sm text-gray-600">Durante o build, a aplicação é empacotada como WAR e embutida no instalador e no ZIP. O WAR não é distribuído como produto: quem instala o Hub não lida com ele.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border-l-4 border-indigo-400 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">Sem nuvem obrigatória</h3>
+                        <p class="text-sm text-gray-600">A operação do ponto funciona com o banco local. Não é preciso contratar servidor de banco, container ou hospedagem para usar o Hub.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border-l-4 border-amber-400 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">Sem aplicativo móvel</h3>
+                        <p class="text-sm text-gray-600">O Hub roda no computador do ponto. Não existe app para celular nesta edição.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border-l-4 border-amber-400 p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">Sem versão para Mac ou Linux</h3>
+                        <p class="text-sm text-gray-600">A pré-release v2.1.0-rc1.7 é Windows x64. Mac e Linux não entram nesta versão.</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-500 mt-6">Ficou alguma dúvida técnica? <a href="canal-feedback.html" class="hub-accent font-semibold hover:text-indigo-800">Use o canal da loja</a>.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="card">
-            <h2>De onde vêm as encomendas</h2>
-            <p>Conectores com <strong>Mercado Livre</strong>, <strong>Shopee</strong> e <strong>Temu</strong> via API e webhooks, além da entrada manual no balcão. <strong>Amazon</strong> e <strong>B2W</strong> não têm conector nesta edição: permanecem apenas no modelo de dados e não aparecem no filtro de canais. Notificações por WhatsApp quando configuradas. <strong>Redis</strong> é cache opcional no servidor de aplicações.</p>
-        </section>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">Gestão logística do ponto de retirada, com os dados no computador do ponto.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">Página inicial</a></li>
+                        <li><a href="download.html" class="hover:text-white">Download e versões</a></li>
+                        <li><a href="https://wiki.caracore.com.br/hub/" class="hover:text-white" rel="noopener">Manual de uso</a></li>
+                        <li><a href="https://www.caracore.com.br/portfolio.html#caracore-hub" class="hover:text-white" rel="noopener">Portfólio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                        <li><a href="https://wa.me/5541999097797" class="hover:text-white" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p class="mb-2">Pré-release Windows v2.1.0-rc1.7 · sem assinatura digital · não homologada · GA do instalador em 06/04/2027 · Mac e Linux fora desta versão.</p>
+                <p>&copy; 2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white" rel="noopener">www.caracore.com.br</a></p>
+            </div>
+        </div>
+    </footer>
 
-        <nav class="back">
-            <a href="index.html">← Voltar ao portal</a> · <a href="download.html">Download</a> · <a href="canal-feedback.html">Canal de feedback</a>
-        </nav>
-    </div>
+    <script>
+        var m = document.getElementById('mobile-menu-button'), n = document.getElementById('mobile-menu');
+        if (m && n) {
+            m.addEventListener('click', function () {
+                n.classList.toggle('hidden');
+                n.classList.toggle('flex');
+                m.setAttribute('aria-expanded', String(!n.classList.contains('hidden')));
+            });
+        }
+    </script>
     <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Pré-lançamento">Garagem<span class="evo-beta-tooltip">Vitrine e artefatos de pré-lançamento · GA instalador Windows 06/04/2027.</span></span></div>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
-
-

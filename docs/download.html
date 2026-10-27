@@ -3,64 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://hub.caracore.com.br/">
-    <title>Download — CaraCore Hub | Cara Core Informática</title>
-    <meta name="description" content="Download do CaraCore Hub: pré-release Windows v2.1.0-rc1.7 para pontos de retirada (PUDOs). Produto Free; suporte opcional com pagamento recorrente de R$ 79,90/mês a partir do GA. Instalador e ZIP, sem assinatura digital. Cara Core Informática.">
+    <title>Download e versões — CaraCore Hub | Cara Core Informática</title>
+    <meta name="description" content="Baixe a pré-release Windows v2.1.0-rc1.7 do CaraCore Hub: instalador e ZIP com SHA-256 publicado. Avaliação, sem assinatura digital.">
+    <meta name="author" content="Cara Core Informática">
+    <meta property="og:title" content="Download e versões — CaraCore Hub">
+    <meta property="og:description" content="Pré-release Windows v2.1.0-rc1.7 do CaraCore Hub: instalador e ZIP com SHA-256 publicado. Avaliação, sem assinatura digital.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://hub.caracore.com.br/download.html">
+    <meta property="og:image" content="https://hub.caracore.com.br/assets/img/hub_tela_02_mapa.png">
+    <meta property="og:image:alt" content="Mapa de posições do CaraCore Hub, com ruas, módulos e posições ocupadas">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://hub.caracore.com.br/download.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/hub-theme.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <meta name="theme-color" content="#4f46e5">
 </head>
-<body class="page-download">
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">CaraCore Hub — Loja</a>
-            <span> · </span>
-            <a href="index.html">CaraCore Hub</a>
-            <span> · </span>
-            <span>Download</span>
+<body class="smooth-scroll bg-gray-50">
+    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
+        <a href="https://www.caracore.com.br/" class="hover:text-indigo-600">Cara Core Informática</a>
+        <span> · </span>
+        <a href="index.html" class="hover:text-indigo-600">CaraCore Hub</a>
+        <span> · </span>
+        <span class="text-gray-900">Download e versões</span>
+    </nav>
+
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 hub-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-boxes-stacked text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore Hub</p>
+                        <p class="text-xs text-gray-600">Gestão do ponto de retirada</p>
+                    </div>
+                </a>
+                <div id="mobile-menu" class="hidden lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white p-4 lg:p-0 flex-col lg:flex-row gap-3 lg:gap-6 lg:items-center">
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-indigo-600 font-medium transition">Como funciona</a>
+                    <a href="index.html#dores" class="text-gray-700 hover:text-indigo-600 font-medium transition">O que resolvemos</a>
+                    <a href="index.html#origens" class="text-gray-700 hover:text-indigo-600 font-medium transition">Canais</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-indigo-600 font-medium transition">Planos</a>
+                    <a href="download.html" class="hub-accent font-semibold">Versões e download</a>
+                    <a href="download.html" class="hub-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">
+                        Baixar pré-release
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
         </nav>
+    </header>
 
-        <header>
-            <h1>Download — CaraCore Hub</h1>
-            <p>Pré-release Windows v2.1.0-rc1.7 para pontos de retirada (PUDOs). O produto é Free; esta versão é de avaliação e não é o GA de 06/04/2027.</p>
-        </header>
+    <section class="portal-hero hub-hero hub-bg text-white py-14 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-indigo-100 mb-3">Windows x64 · <span class="whitespace-nowrap">pré-release</span> · avaliação</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Download do CaraCore Hub</h1>
+                <p class="text-lg text-indigo-50 mb-8">
+                    Instalador ou ZIP da versão <strong>v2.1.0-rc1.7</strong>. Os arquivos não têm assinatura digital e esta versão não foi homologada. Não use em produção antes do GA de 06/04/2027.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.7/CaraCore.Hub-2.1.0-rc1.7-win-x64.exe" class="inline-flex items-center justify-center bg-white hub-accent px-8 py-4 rounded-lg font-bold hover:bg-indigo-50 transition shadow-lg">
+                        <i class="fas fa-download mr-3" aria-hidden="true"></i> Baixar instalador
+                    </a>
+                    <a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.7/CaraCore.Hub-2.1.0-rc1.7-win-x64.zip" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-indigo-700 transition">
+                        Baixar ZIP portátil
+                    </a>
+                </div>
+                <p class="text-sm text-indigo-100 mt-6">
+                    Instalador 274.162.562 bytes · ZIP 324.502.796 bytes · SHA-256 na seção abaixo · pacote de 27/10/2026
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <section class="card">
-            <p><strong>Versão de avaliação para pontos de retirada.</strong> A pré-release abaixo cobre recebimento, guarda por posição e retirada conferida das encomendas. Não use em produção até o GA de 06/04/2027.</p>
-        </section>
+    <section class="py-14 md:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Os dois arquivos, byte a byte</h2>
+                <div class="rounded-2xl border border-gray-200 p-6 mb-6">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2"><i class="fas fa-file-arrow-down hub-accent mr-2" aria-hidden="true"></i>Instalador — <code class="text-base">CaraCore.Hub-2.1.0-rc1.7-win-x64.exe</code></h3>
+                    <p class="text-sm text-gray-600 mb-3">274.162.562 bytes · Windows x64 · sem assinatura digital · não desative o SmartScreen, o Defender nem o antivírus.</p>
+                    <p class="text-xs text-gray-500 break-all mb-4">SHA-256 1563f1bd343b0044f9a64dd9bb7d3a1604761ee7f1e2354e8663b693cb310ba1</p>
+                    <a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.7/CaraCore.Hub-2.1.0-rc1.7-win-x64.exe" class="hub-accent font-semibold hover:text-indigo-800">Baixar o instalador →</a>
+                </div>
+                <div class="rounded-2xl border border-gray-200 p-6">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2"><i class="fas fa-file-zipper hub-accent mr-2" aria-hidden="true"></i>ZIP portátil — <code class="text-base">CaraCore.Hub-2.1.0-rc1.7-win-x64.zip</code></h3>
+                    <p class="text-sm text-gray-600 mb-3">324.502.796 bytes · mesma edição, sem instalador · extraia a pasta e execute <code>CaraCore Hub.exe</code>.</p>
+                    <p class="text-xs text-gray-500 break-all mb-4">SHA-256 924af1960ccda606e4b3979ff36741f7e78228f8f77c396ccb985878b940b37e</p>
+                    <a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.7/CaraCore.Hub-2.1.0-rc1.7-win-x64.zip" class="hub-accent font-semibold hover:text-indigo-800">Baixar o ZIP →</a>
+                </div>
+                <p class="text-sm text-gray-500 mt-6">
+                    Também disponíveis no GitHub: <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.7" class="hub-accent hover:text-indigo-800 underline">release v2.1.0-rc1.7</a> (pré-release, não é a versão estável), com os dois <code>.sha256</code> e os manifestos de build. Manual de uso em <a href="https://wiki.caracore.com.br/hub/" class="hub-accent hover:text-indigo-800 underline">wiki.caracore.com.br/hub</a>.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <section class="card">
-            <p><strong>Free desktop · v2.1.0-rc1.7 (avaliação).</strong> Gestão logística interna de um ponto de retirada: recebimento, conferência, guarda por posição e retirada conferida das encomendas que chegam do Mercado Livre, da Shopee e da Temu. Windows x64, sem assinatura digital, para avaliação. Electron, Tomcat embutido e SQLite local no computador do ponto. O programa identifica a versão 2.1.0-rc1.7. Não inclui Mac nem Linux. Não é o GA e não está homologada para produção.</p>
-            <p>Instalador: <code>CaraCore.Hub-2.1.0-rc1.7-win-x64.exe</code> · 274.162.562 bytes</p>
-            <p>SHA-256: <code>1563f1bd343b0044f9a64dd9bb7d3a1604761ee7f1e2354e8663b693cb310ba1</code>. Não desative SmartScreen, Defender ou antivírus.</p>
-            <a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.7/CaraCore.Hub-2.1.0-rc1.7-win-x64.exe" class="btn-release">Baixar instalador Windows x64</a>
-            <p>ZIP, mesma edição, sem instalador: <code>CaraCore.Hub-2.1.0-rc1.7-win-x64.zip</code> · 324.502.796 bytes. SHA-256: <code>924af1960ccda606e4b3979ff36741f7e78228f8f77c396ccb985878b940b37e</code>. Extraia a pasta e execute <code>CaraCore Hub.exe</code>.</p>
-            <p><a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.7/CaraCore.Hub-2.1.0-rc1.7-win-x64.zip">Baixar ZIP</a> · pacote na <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.7">release v2.1.0-rc1.7</a> · manual na <a href="https://wiki.caracore.com.br/hub/">wiki</a>.</p>
-            <p><strong>O que mudou nesta RC:</strong> senha com mínimo de 12 caracteres em todos os caminhos — antes três telas aceitavam 6 e a senha temporária saía com 8 — e a tela <strong>Auditoria e Logs</strong> (<code>/admin/auditoria</code>) agora tem item no menu, em Administração. O resto é o que a <code>rc1.6</code> entregou: permissão por perfil com <code>403</code> em JSON, auditoria de usuários gravada no banco e as telas de demonstração fora do pacote. As notas completas estão <a href="https://github.com/chmulato/caracore-hub-releases/blob/master/RELEASE_2.1.0-rc1.7.md">neste arquivo</a>.</p>
-            <p>A tag <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.6">v2.1.0-rc1.6</a> conserva o pacote de 25/10/2026, a <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.2">v2.1.0-rc1.2</a> o de 08/10/2026, a <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.1">v2.1.0-rc1.1</a> o de 06/10/2026 e a <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1">v2.1.0-rc1</a> o instalador de 05/10/2026. O arquivo desta página é o pacote de 27/10/2026.</p>
-        </section>
+    <section class="py-14 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">O que mudou nesta versão</h2>
+                <div class="bg-white rounded-2xl border border-gray-200 p-6 md:p-8">
+                    <h3 class="font-bold text-gray-900 mb-3">v2.1.0-rc1.7 — 27/10/2026</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-check hub-accent mr-3 mt-1"></i><span><strong>Uma senha só, de 12 caracteres</strong>, em todos os caminhos: configuração inicial, recuperação por código, troca pelo perfil e cadastro feito pelo administrador. Antes três telas aceitavam 6 caracteres e a senha temporária saía com 8.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check hub-accent mr-3 mt-1"></i><span><strong>Auditoria e Logs</strong> ganhou item no menu, em Administração. Antes a tela existia e só abria por URL.</span></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">A base vem da <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.6" class="hub-accent hover:text-indigo-800 underline">v2.1.0-rc1.6</a>: permissão por perfil com a recusa em JSON, auditoria de usuários gravada no banco e as telas de demonstração fora do pacote. Notas completas em <a href="https://github.com/chmulato/caracore-hub-releases/blob/master/RELEASE_2.1.0-rc1.7.md" class="hub-accent hover:text-indigo-800 underline">RELEASE_2.1.0-rc1.7.md</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="card" id="plano">
-            <p><strong>Hub Free + suporte recorrente — R$ 79,90/mês.</strong> O Hub é <strong>Free</strong>: não há licença mensal pelo produto. O pagamento recorrente de R$ 79,90 por mês é do <strong>suporte</strong>, a partir do GA do instalador Windows (06/04/2027). O suporte cobre a operação do ponto e as integrações com Mercado Livre, Shopee e Temu, com <strong>primeira resposta em até 24 horas</strong>. Sem o suporte, a loja mantém credenciais, webhooks e ajustes de canal por conta própria. Não cobre o marketplace, a internet da loja nem o computador do ponto. Esta pré-release é de avaliação e não é cobrada.</p>
-            <p><a href="canal-feedback.html">Falar sobre o suporte</a>.</p>
-        </section>
+    <section class="py-14 md:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">O que esta versão ainda não faz</h2>
+                <p class="text-gray-600 mb-6">Lista curta, para a avaliação ser honesta. Nada disso está escondido na letra miúda.</p>
+                <div class="rounded-2xl border-l-4 border-amber-400 bg-amber-50 p-6">
+                    <ul class="space-y-3 text-gray-800">
+                        <li class="flex items-start"><i class="fas fa-minus text-amber-500 mr-3 mt-1"></i><span>Não tem assinatura digital, então o Windows vai avisar na instalação.</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-amber-500 mr-3 mt-1"></i><span>Não tem versão para Mac nem para Linux.</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-amber-500 mr-3 mt-1"></i><span>Não foi homologada e não deve ser usada em produção antes do GA de 06/04/2027.</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-amber-500 mr-3 mt-1"></i><span>A leitura por leitor de código de barras não foi testada com equipamento nesta pré-release. A conferência pela tela é por volume: cada volume tem a sua caixa e o pedido só fecha quando todos forem marcados.</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-amber-500 mr-3 mt-1"></i><span>Não existe aplicativo para celular. O Hub roda no computador do ponto.</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-amber-500 mr-3 mt-1"></i><span>Amazon e B2W não têm conector nesta edição.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="card">
-            <p><strong>GA Windows.</strong> O instalador estável para o cliente final está planejado para <strong>06 de abril de 2027</strong>. Esta RC não substitui essa data.</p>
-        </section>
+    <section id="plano" class="py-14 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl border-2 border-gray-200 p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Produto: Free — R$ 0</h2>
+                    <p class="text-gray-600 text-sm">Não há licença mensal pelo produto. Esta pré-release é de avaliação e não é cobrada. Escopo e limites da edição Free são publicados até o GA.</p>
+                    <p class="mt-3 text-sm"><a href="index.html#planos" class="hub-accent font-semibold hover:text-indigo-800">Ver o que a edição Free inclui →</a></p>
+                </div>
+                <div class="bg-white rounded-2xl border-2 border-indigo-400 p-6 shadow-lg">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Suporte: R$ 79,90/mês</h2>
+                    <p class="text-gray-600 text-sm">Pago à parte, com contratação a partir do GA do instalador Windows (06/04/2027), pago todo mês. Cobre a operação do ponto e as integrações com Mercado Livre, Shopee e Temu, com primeira resposta em até 24 horas. Sem o suporte, credenciais, webhooks e ajustes de canal ficam por conta da loja. Não cobre o marketplace, a internet da loja nem o computador do ponto.</p>
+                    <p class="mt-3 text-sm"><a href="canal-feedback.html" class="hub-accent font-semibold hover:text-indigo-800">Falar sobre o suporte →</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <nav class="back">
-            <a href="index.html">← Voltar ao portal</a> · <a href="tecnologia.html">Tecnologia</a> · <a href="canal-feedback.html">Canal de feedback</a>
-        </nav>
-    </div>
+    <section class="py-14 md:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Versões anteriores</h2>
+                <p class="text-gray-600 mb-6">Tag publicada não se reescreve: cada uma conserva o arquivo do dia em que foi publicada.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li><a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.6" class="hub-accent font-semibold hover:text-indigo-800">v2.1.0-rc1.6</a> — pacote de 25/10/2026 (EXE 274.160.424 bytes, ZIP 324.500.797 bytes).</li>
+                    <li><a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.2" class="hub-accent font-semibold hover:text-indigo-800">v2.1.0-rc1.2</a> — pacote de 08/10/2026.</li>
+                    <li><a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.1" class="hub-accent font-semibold hover:text-indigo-800">v2.1.0-rc1.1</a> — pacote de 06/10/2026.</li>
+                    <li><a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1" class="hub-accent font-semibold hover:text-indigo-800">v2.1.0-rc1</a> — instalador de 05/10/2026.</li>
+                </ul>
+                <div class="mt-8 rounded-2xl hub-chip border border-indigo-200 p-6">
+                    <h3 class="font-bold text-gray-900 mb-2">GA do instalador: 06/04/2027</h3>
+                    <p class="text-sm text-gray-700">A versão estável para o cliente final está planejada para <strong>6 de abril de 2027</strong>. Esta pré-release não antecipa nem substitui essa data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">Gestão logística do ponto de retirada, com os dados no computador do ponto.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">Página inicial</a></li>
+                        <li><a href="tecnologia.html" class="hover:text-white">Tecnologia</a></li>
+                        <li><a href="https://wiki.caracore.com.br/hub/" class="hover:text-white" rel="noopener">Manual de uso</a></li>
+                        <li><a href="https://www.caracore.com.br/portfolio.html#caracore-hub" class="hover:text-white" rel="noopener">Portfólio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                        <li><a href="https://wa.me/5541999097797" class="hover:text-white" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p class="mb-2">Pré-release Windows v2.1.0-rc1.7 · sem assinatura digital · não homologada · GA do instalador em 06/04/2027 · Mac e Linux fora desta versão.</p>
+                <p>&copy; 2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white" rel="noopener">www.caracore.com.br</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var m = document.getElementById('mobile-menu-button'), n = document.getElementById('mobile-menu');
+        if (m && n) {
+            m.addEventListener('click', function () {
+                n.classList.toggle('hidden');
+                n.classList.toggle('flex');
+                m.setAttribute('aria-expanded', String(!n.classList.contains('hidden')));
+            });
+        }
+    </script>
     <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Pré-lançamento">Garagem<span class="evo-beta-tooltip">Vitrine e artefatos de pré-lançamento · GA instalador Windows 06/04/2027.</span></span></div>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
-
-

@@ -3,64 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://hub.caracore.com.br/">
     <title>Canal de feedback — CaraCore Hub | Cara Core Informática</title>
     <meta name="description" content="Suporte e feedback do CaraCore Hub: e-mail suporte@caracore.com.br, WhatsApp e Telegram. Não atendemos ligações telefônicas.">
+    <meta name="author" content="Cara Core Informática">
+    <meta property="og:title" content="Canal de feedback — CaraCore Hub">
+    <meta property="og:description" content="Suporte e feedback do CaraCore Hub por e-mail, WhatsApp e Telegram. Não atendemos ligações.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://hub.caracore.com.br/canal-feedback.html">
+    <meta property="og:image" content="https://hub.caracore.com.br/assets/img/hub_tela_02_mapa.png">
+    <meta property="og:image:alt" content="Mapa de posições do CaraCore Hub, com ruas, módulos e posições ocupadas">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://hub.caracore.com.br/canal-feedback.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/hub-theme.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <meta name="theme-color" content="#4f46e5">
 </head>
-<body class="page-canal">
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">CaraCore Hub — Loja</a>
-            <span> · </span>
-            <a href="index.html">CaraCore Hub</a>
-            <span> · </span>
-            <span>Canal de feedback</span>
+<body class="smooth-scroll bg-gray-50">
+    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
+        <a href="https://www.caracore.com.br/" class="hover:text-indigo-600">Cara Core Informática</a>
+        <span> · </span>
+        <a href="index.html" class="hover:text-indigo-600">CaraCore Hub</a>
+        <span> · </span>
+        <span class="text-gray-900">Canal de feedback</span>
+    </nav>
+
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 hub-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-boxes-stacked text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore Hub</p>
+                        <p class="text-xs text-gray-600">Gestão do ponto de retirada</p>
+                    </div>
+                </a>
+                <div id="mobile-menu" class="hidden lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white p-4 lg:p-0 flex-col lg:flex-row gap-3 lg:gap-6 lg:items-center">
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-indigo-600 font-medium transition">Como funciona</a>
+                    <a href="index.html#dores" class="text-gray-700 hover:text-indigo-600 font-medium transition">O que resolvemos</a>
+                    <a href="index.html#origens" class="text-gray-700 hover:text-indigo-600 font-medium transition">Canais</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-indigo-600 font-medium transition">Planos</a>
+                    <a href="download.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">Versões e download</a>
+                    <a href="download.html" class="hub-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">
+                        Baixar pré-release
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
         </nav>
+    </header>
 
-        <header>
-            <h1>Canal de feedback — CaraCore Hub</h1>
-            <p class="subtitle">Suporte, dúvidas sobre deploy e operação. Respeitamos a LGPD.</p>
-        </header>
+    <section class="portal-hero hub-hero hub-bg text-white py-14 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-indigo-100 mb-3">Fale com a Cara Core</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Canal de feedback</h1>
+                <p class="text-lg text-indigo-50">
+                    Suporte, dúvidas de instalação e integração, e sugestões sobre o CaraCore Hub. Por <span class="whitespace-nowrap">e-mail</span>, WhatsApp ou Telegram.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <div class="no-phone"><strong>Não atendemos ligações telefônicas.</strong> Utilize apenas e-mail, WhatsApp ou Telegram.</div>
+    <section class="py-8 bg-amber-50 border-y border-amber-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto flex items-start gap-3">
+                <i class="fas fa-circle-info text-amber-600 mt-1" aria-hidden="true"></i>
+                <p class="text-sm text-amber-900"><strong>Não atendemos ligações telefônicas.</strong> Use um dos três canais abaixo — todos chegam à mesma pessoa.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="intro">
-            <p><strong>Contato da Cara Core Informática</strong> para suporte técnico, dúvidas sobre o CaraCore Hub (gestão logística do ponto de retirada, instalação e integrações) e feedback.</p>
-        </section>
+    <section class="py-14 md:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+                <a href="mailto:suporte@caracore.com.br?subject=CaraCore%20Hub%20-%20Suporte%20/%20Feedback" class="block bg-white rounded-2xl border-2 border-gray-200 hover:border-indigo-400 hover:shadow-lg transition p-6">
+                    <i class="fas fa-envelope text-2xl hub-accent mb-3" aria-hidden="true"></i>
+                    <h2 class="font-bold text-gray-900 mb-1">E-mail</h2>
+                    <p class="text-sm text-gray-600 mb-2">suporte@caracore.com.br</p>
+                    <p class="text-sm text-gray-500">Assunto sugerido: “CaraCore Hub — Suporte / Feedback”. Melhor canal para anexar print de tela e log.</p>
+                </a>
+                <a href="https://wa.me/5541999097797?text=Ol%C3%A1%2C%20vim%20pelo%20portal%20CaraCore%20Hub%20para%20suporte%20%2F%20feedback." class="block bg-white rounded-2xl border-2 border-gray-200 hover:border-indigo-400 hover:shadow-lg transition p-6" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp text-2xl hub-accent mb-3" aria-hidden="true"></i>
+                    <h2 class="font-bold text-gray-900 mb-1">WhatsApp</h2>
+                    <p class="text-sm text-gray-600 mb-2">+55 (41) 9 9909-7797</p>
+                    <p class="text-sm text-gray-500">Bom para dúvida rápida e para combinar uma conversa.</p>
+                </a>
+                <a href="https://t.me/chmulato" class="block bg-white rounded-2xl border-2 border-gray-200 hover:border-indigo-400 hover:shadow-lg transition p-6" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram text-2xl hub-accent mb-3" aria-hidden="true"></i>
+                    <h2 class="font-bold text-gray-900 mb-1">Telegram</h2>
+                    <p class="text-sm text-gray-600 mb-2">@chmulato</p>
+                    <p class="text-sm text-gray-500">Alternativa ao WhatsApp, com o mesmo destino.</p>
+                </a>
+            </div>
+            <p class="max-w-4xl mx-auto text-sm text-gray-500 mt-6">Esta loja é um site estático e não tem formulário que envie mensagem sozinho. O botão de e-mail abre o seu programa de correio com o assunto já preenchido; nada é enviado até você apertar enviar.</p>
+        </div>
+    </section>
 
-        <section class="channels">
-            <a href="mailto:suporte@caracore.com.br?subject=CaraCore%20Hub%20-%20Suporte%20/%20Feedback" class="channel-card">
-                <div class="icon">✉️</div>
-                <div class="title">E-mail — suporte@caracore.com.br</div>
-                <div class="desc">Assunto sugerido: &quot;CaraCore Hub - Suporte / Feedback&quot;. Dúvidas sobre deploy, operação ou integrações. Resposta em horário comercial.</div>
-            </a>
-            <a href="https://wa.me/5541999097797?text=Olá%2C%20vim%20pelo%20portal%20CaraCore%20Hub%20para%20suporte%20%2F%20feedback." class="channel-card" target="_blank" rel="noopener">
-                <div class="icon">💬</div>
-                <div class="title">WhatsApp — +55 (41) 9 9909-7797</div>
-                <div class="desc">Cara Core Informática. Suporte e feedback sobre o CaraCore Hub.</div>
-            </a>
-            <a href="https://t.me/chmulato" class="channel-card" target="_blank" rel="noopener">
-                <div class="icon">✈️</div>
-                <div class="title">Telegram — @chmulato</div>
-                <div class="desc">Cara Core Informática. Suporte e feedback. Não atendemos ligações telefônicas.</div>
-            </a>
-        </section>
+    <section class="py-14 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">O que escrever em cada caso</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-1">Para avaliar a pré-release</h3>
+                        <p class="text-sm text-gray-600">Diga a versão (v2.1.0-rc1.7), o Windows usado, o que você fez e o que aconteceu. Se aparecer tela de erro, mande o print e a mensagem completa. Não envie senha nem o arquivo do banco.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-1">Para problema de instalação ou abertura</h3>
+                        <p class="text-sm text-gray-600">Informe se usou o instalador ou o ZIP, se o Windows mostrou aviso do SmartScreen (o pacote não tem assinatura digital) e o horário da tentativa. Isso encurta a análise.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-1">Para integração de canal</h3>
+                        <p class="text-sm text-gray-600">Conte qual marketplace (Mercado Livre, Shopee ou Temu), se o erro aparece no cadastro das credenciais ou na chegada do pedido, e quantas encomendas foram afetadas. Amazon e B2W não têm conector nesta edição.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6">
+                        <h3 class="font-bold text-gray-900 mb-1">Para falar de suporte pago</h3>
+                        <p class="text-sm text-gray-600">O suporte de R$ 79,90/mês é contratado a partir do GA do instalador (06/04/2027), com primeira resposta em até 24 horas. Antes disso, o contato é de avaliação da pré-release, sem contrato.</p>
+                    </div>
+                </div>
+                <div class="mt-8 rounded-2xl hub-chip border border-indigo-200 p-6">
+                    <h3 class="font-bold text-gray-900 mb-2">Sobre os seus dados</h3>
+                    <p class="text-sm text-gray-700">Os dados das encomendas ficam no computador do ponto. Para atender um chamado, pedimos só o necessário e não pedimos o arquivo do banco nem senha. O tratamento segue a LGPD (Lei 13.709/2018).</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <nav class="back">
-            <a href="index.html">← Voltar ao portal</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a>
-        </nav>
-    </div>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">Gestão logística do ponto de retirada, com os dados no computador do ponto.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">Página inicial</a></li>
+                        <li><a href="tecnologia.html" class="hover:text-white">Tecnologia</a></li>
+                        <li><a href="download.html" class="hover:text-white">Download e versões</a></li>
+                        <li><a href="https://wiki.caracore.com.br/hub/" class="hover:text-white" rel="noopener">Manual de uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                        <li><a href="https://wa.me/5541999097797" class="hover:text-white" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="https://t.me/chmulato" class="hover:text-white" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p class="mb-2">Pré-release Windows v2.1.0-rc1.7 · sem assinatura digital · não homologada · GA do instalador em 06/04/2027 · Mac e Linux fora desta versão.</p>
+                <p>&copy; 2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white" rel="noopener">www.caracore.com.br</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var m = document.getElementById('mobile-menu-button'), n = document.getElementById('mobile-menu');
+        if (m && n) {
+            m.addEventListener('click', function () {
+                n.classList.toggle('hidden');
+                n.classList.toggle('flex');
+                m.setAttribute('aria-expanded', String(!n.classList.contains('hidden')));
+            });
+        }
+    </script>
     <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Pré-lançamento">Garagem<span class="evo-beta-tooltip">Vitrine e artefatos de pré-lançamento · GA instalador Windows 06/04/2027.</span></span></div>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
-
-

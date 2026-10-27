@@ -3,170 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://hub.caracore.com.br/">
-    <title>CaraCore Hub — Gestão logística para pontos de retirada (PUDO) | Cara Core Informática</title>
-    <meta name="description" content="CaraCore Hub: gestão logística interna para pontos de retirada (PUDOs). Recebimento, guarda e retirada de encomendas com SQLite local. Integrações com Mercado Livre, Shopee e Temu. Cara Core Informática.">
+    <title>CaraCore Hub — gestão do ponto de retirada (PUDO)</title>
+    <meta name="description" content="Receba, guarde por posição e acompanhe encomendas de Mercado Livre, Shopee e Temu. Dados no computador do ponto. Produto Free; pré-release em avaliação.">
+    <meta name="keywords" content="ponto de retirada, PUDO, gestão de encomendas, Mercado Livre, Shopee, Temu, logística local">
+    <meta name="author" content="Cara Core Informática">
+    <meta property="og:title" content="CaraCore Hub — gestão do ponto de retirada">
+    <meta property="og:description" content="Receba, guarde e acompanhe as encomendas do PUDO com os dados no computador do ponto. Produto Free; pré-release Windows v2.1.0-rc1.7 em avaliação.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://hub.caracore.com.br/">
+    <meta property="og:image" content="https://hub.caracore.com.br/assets/img/hub_tela_02_mapa.png">
+    <meta property="og:image:alt" content="Mapa de posições do CaraCore Hub, com ruas, módulos e posições ocupadas">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://hub.caracore.com.br/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/hub-theme.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <meta name="theme-color" content="#4f46e5">
 </head>
-<body class="page-index cc-i-page">
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="https://www.caracore.com.br/">Cara Core Informática</a>
-            <span> · </span>
-            <a href="https://www.caracore.com.br/portfolio.html#caracore-hub" rel="noopener">Portfólio</a>
-            <span> · </span>
-            <span>CaraCore Hub — Loja</span>
+<body class="smooth-scroll bg-gray-50">
+    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
+        <a href="https://www.caracore.com.br/" class="hover:text-indigo-600">Cara Core Informática</a>
+        <span> · </span>
+        <a href="https://www.caracore.com.br/portfolio.html#caracore-hub" class="hover:text-indigo-600" rel="noopener">Portfólio</a>
+        <span> · </span>
+        <span class="text-gray-900">CaraCore Hub</span>
+    </nav>
+
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 hub-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-boxes-stacked text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore Hub</p>
+                        <p class="text-xs text-gray-600">Gestão do ponto de retirada</p>
+                    </div>
+                </a>
+                <div id="mobile-menu" class="hidden lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white p-4 lg:p-0 flex-col lg:flex-row gap-3 lg:gap-6 lg:items-center">
+                    <a href="#jornada" class="text-gray-700 hover:text-indigo-600 font-medium transition">Como funciona</a>
+                    <a href="#dores" class="text-gray-700 hover:text-indigo-600 font-medium transition">O que resolvemos</a>
+                    <a href="#origens" class="text-gray-700 hover:text-indigo-600 font-medium transition">Canais</a>
+                    <a href="#planos" class="text-gray-700 hover:text-indigo-600 font-medium transition">Planos</a>
+                    <a href="download.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">Versões e download</a>
+                    <a href="download.html" class="hub-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">
+                        Baixar pré-release
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
         </nav>
+    </header>
 
-        <section class="hero-cta" aria-label="Status de pré-lançamento do CaraCore Hub" style="margin-bottom: 1.5rem; border-left-color: var(--accent-gold, #d4a853);">
-            <p class="hero-label">Pré-lançamento</p>
-            <h2 class="hero-title">Pré-release Windows v2.1.0-rc1.7 · GA em 06/04/2027</h2>
-            <p class="hero-desc">A pré-release Windows está disponível para avaliação, sem assinatura digital. O GA do instalador continua em <strong>06 de abril de 2027</strong>. O Hub é Free; no GA, o suporte opcional passa a ter pagamento recorrente de <strong>R$ 79,90/mês</strong>. Mac e Linux não entram nesta versão.</p>
-        </section>
-
-        <!-- Hero: o que é, valor e CTA em poucos segundos -->
-        <section class="hero-cta" aria-label="O que é o CaraCore Hub?">
-            <p class="hero-label">O que é o CaraCore Hub?</p>
-            <h2 class="hero-title">Receba, guarde e entregue as encomendas do seu ponto de retirada — com controle local.</h2>
-            <p class="hero-desc">O <strong>CaraCore Hub 2.1</strong> organiza o dia a dia de um <strong>PUDO</strong> (ponto de retirada e entrega): recebimento, conferência, guarda por posição, etiquetas e retirada conferida volume a volume. As encomendas chegam do Mercado Livre, da Shopee e da Temu. Os dados ficam em <strong>SQLite local</strong> no computador do cliente. A pré-release Windows v2.1.0-rc1.7 está publicada para avaliação, sem assinatura digital. O GA permanece em 06/04/2027. O produto é Free; o suporte opcional é contratado à parte.</p>
-            <p class="hero-desc" style="margin-bottom: 1rem;">
-                <strong>Preço:</strong> R$ 0 pelo produto (Free).<br>
-                <strong>Licença:</strong> sem mensalidade pelo uso.<br>
-                <strong>Pago à parte:</strong> suporte R$ 79,90/mês a partir do GA (06/04/2027), com primeira resposta em até 24 horas.<br>
-                <strong>Sem suporte:</strong> credenciais, webhooks e ajustes de canal ficam por conta da loja.<br>
-                <strong>Não incluído:</strong> Mac e Linux nesta tag; o marketplace, a internet da loja e o computador do ponto.
-            </p>
-            <div class="cta-buttons">
-                <a href="download.html" class="cta-btn cta-btn-primary">Baixar pré-release (Free)</a>
-                <a href="#plano" class="cta-btn cta-btn-secondary">Suporte recorrente: R$ 79,90/mês</a>
+    <section class="portal-hero hub-hero hub-bg text-white py-20 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-indigo-100 mb-4">Ponto de retirada (PUDO) · Windows x64 · <span class="whitespace-nowrap">pré-release</span></p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Receba, guarde e acompanhe as encomendas do seu ponto de retirada.
+                </h1>
+                <p class="text-xl md:text-2xl text-indigo-50 mb-10">
+                    O CaraCore Hub reúne o dia de um PUDO: cadastro do pedido e dos volumes, mapa de posições por rua e módulo, e a lista de pedidos filtrada por status, canal e destinatário. As encomendas chegam do Mercado Livre, da Shopee e da Temu. Os dados ficam no computador do ponto. O produto é Free: R$ 0.
+                </p>
+                <a href="download.html" class="inline-flex items-center justify-center bg-white hub-accent px-10 py-4 rounded-lg font-bold text-lg hover:bg-indigo-50 transition shadow-lg">
+                    Baixar a pré-release v2.1.0-rc1.7
+                </a>
+                <p class="mt-6 text-sm text-indigo-100">
+                    Versão Windows para avaliação, sem assinatura digital e ainda não homologada. O GA do instalador está planejado para 06/04/2027. Mac e Linux ficam fora desta versão.
+                </p>
             </div>
-        </section>
-
-        <header>
-            <h1>CaraCore Hub</h1>
-            <p class="subtitle">Gestão logística interna para pontos de retirada. Aplicação web 2.1 concluída, ainda sem homologação. Pré-release Windows v2.1.0-rc1.7 para avaliação. GA do instalador em 06/04/2027.</p>
-        </header>
-
-        <section class="methodology">
-            <div class="card">
-                <h2>O que é o CaraCore Hub?</h2>
-                <p>O <strong>CaraCore Hub 2.1</strong> é o sistema de balcão de um ponto de retirada: recebe a encomenda, confere e etiqueta, guarda em uma posição identificada e entrega ao destinatário com conferência de volume. O mapa de ocupação, o inventário e a auditoria ficam no mesmo lugar. A vitrine não vende um SaaS em nuvem: o banco fica no computador do ponto de retirada.</p>
-            </div>
-            <div class="card card-differential">
-                <h2>Autonomia local</h2>
-                <p>O banco do Hub é <strong>SQLite local</strong>, no computador do cliente. A pré-release Windows leva Electron e Tomcat embutido. As migrações do banco são as mesmas da versão web. O GA dessa oferta permanece em 06/04/2027.</p>
-            </div>
-            <div class="card card-differential">
-                <h2>Para quem é</h2>
-                <p>Para quem já recebe encomendas de terceiros e entrega no balcão: <strong>pontos de retirada (PUDOs)</strong>, lojas de bairro, papelarias, mercados e operações de última milha que precisam de controle local em vez de planilha. O <strong>Programa Tias Sócias</strong> fica disponível apenas como cenário ilustrativo de última milha; não é produto, case ou prova de mercado. <a href="slides/apresentacao_tia_socia.html" style="color: var(--accent-blue);">Ver cenário ilustrativo</a>.</p>
-            </div>
-            <div class="card card-differential" id="plano">
-                <h2>Suporte recorrente — R$ 79,90/mês</h2>
-                <p>O Hub é <strong>Free</strong>: não há licença mensal para usar o produto. O que tem pagamento recorrente é o <strong>suporte</strong>, a R$ 79,90 por mês, a partir do GA do instalador Windows (<strong>06/04/2027</strong>). O suporte cobre a operação do ponto de retirada e as <strong>integrações com Mercado Livre, Shopee e Temu</strong> — credenciais, webhooks, etiquetas e mudanças de canal, que não avisam quando mudam. A primeira resposta sai em <strong>até 24 horas</strong>. Sem o suporte, a loja mantém credenciais, webhooks e ajustes de canal por conta própria; o suporte não cobre o marketplace, a internet da loja nem o computador do ponto. A pré-release atual é de avaliação e não é cobrada.</p>
-                <p><a href="canal-feedback.html" style="color: var(--accent-blue);">Falar sobre o suporte</a></p>
-            </div>
-        </section>
-
-        <section class="methodology" aria-label="De onde vêm as encomendas">
-            <div class="card">
-                <h2>De onde vêm as encomendas</h2>
-                <p>O Hub não substitui o marketplace: ele recebe a encomenda que já foi vendida e organiza o que acontece no balcão do ponto de retirada. Nesta edição há conector para três canais e entrada manual.</p>
-            </div>
-            <div class="card">
-                <h2>Mercado Livre</h2>
-                <p>Webhook e conector trazem o pedido, a etiqueta e o status para a fila de recebimento.</p>
-            </div>
-            <div class="card">
-                <h2>Shopee</h2>
-                <p>Mesmo fluxo: pedido e etiqueta entram na fila e seguem para recebimento, guarda e retirada.</p>
-            </div>
-            <div class="card">
-                <h2>Temu</h2>
-                <p>Conector próprio, com worker de importação e atualização de status.</p>
-            </div>
-            <div class="card">
-                <h2>Amazon e B2W</h2>
-                <p>Sem conector nesta edição. Não aparecem no filtro de canais e não são oferecidos como integração.</p>
-            </div>
-        </section>
-
-        <p class="nav-section-title">Links</p>
-        <div class="nav-grid">
-            <a href="download.html" class="nav-card" title="Download e deploy">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                </span>
-                <h3>Download</h3>
-                <p>Pré-release Windows v2.1.0-rc1.7, instalador ou ZIP, sem assinatura digital. O GA do instalador segue em 06/04/2027.</p>
-            </a>
-            <a href="canal-feedback.html" class="nav-card" title="Suporte e feedback">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                    </svg>
-                </span>
-                <h3>Canal de feedback</h3>
-                <p>E-mail suporte@caracore.com.br, WhatsApp e Telegram. Não atendemos ligações telefônicas.</p>
-            </a>
-            <a href="tecnologia.html" class="nav-card">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>
-                    </svg>
-                </span>
-                <h3>Tecnologia</h3>
-                <p>Java/Jakarta EE, SQLite, Tomcat. Stack local e autonomia operacional.</p>
-            </a>
-            <a href="https://wiki.caracore.com.br/hub/" class="nav-card" title="Manual de uso do Hub">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                    </svg>
-                </span>
-                <h3>Manual de uso</h3>
-                <p>Primeiro acesso, recebimento, guarda, retirada e administração do ponto de retirada.</p>
-            </a>
-            <a href="https://www.caracore.com.br/portfolio.html#caracore-hub" class="nav-card" rel="noopener">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                </span>
-                <h3>Portfólio Cara Core</h3>
-                <p>CaraCore Hub no portfólio de produtos da Cara Core Informática.</p>
-            </a>
-            <a href="https://github.com/chmulato/caracore-hub-releases/releases" class="nav-card" target="_blank" rel="noopener noreferrer">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                    </svg>
-                </span>
-                <h3>Releases</h3>
-                <p>Instalador e ZIP das versões publicadas em chmulato/caracore-hub-releases. O código da oficina é privado.</p>
-            </a>
         </div>
+    </section>
 
-        <footer>
-            <p><a href="index.html">CaraCore Hub — Loja</a> · <a href="https://www.caracore.com.br/portfolio.html#caracore-hub" rel="noopener">Portfólio Cara Core</a></p>
-            <p>CaraCore Hub — gestão logística interna para pontos de retirada (PUDOs). SQLite local, autonomia local.</p>
-            <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
-        </footer>
-    </div>
+    <section id="jornada" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Como funciona no ponto</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Três telas do dia a dia. As capturas abaixo são da pré-release v2.1.0-rc1.7.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <figure class="hub-shot rounded-2xl overflow-hidden border border-gray-100">
+                    <picture>
+                        <source srcset="assets/img/hub_tela_01_receber.webp" type="image/webp">
+                        <img src="assets/img/hub_tela_01_receber.png" alt="Tela de recebimento do CaraCore Hub com dados do destinatário e dois volumes" width="1600" height="1000" loading="eager">
+                    </picture>
+                    <figcaption class="p-5">
+                        <h3 class="font-bold text-gray-900 mb-1">Recebe e cadastra</h3>
+                        <p class="text-sm text-gray-600">Pedido, destinatário e volumes com etiqueta, peso e dimensões — no balcão ou pelos conectores dos três canais.</p>
+                    </figcaption>
+                </figure>
+                <figure class="hub-shot rounded-2xl overflow-hidden border border-gray-100">
+                    <picture>
+                        <source srcset="assets/img/hub_tela_02_mapa.webp" type="image/webp">
+                        <img src="assets/img/hub_tela_02_mapa.png" alt="Mapa de estoque do CaraCore Hub com setores, ruas e módulos" width="1600" height="1000" loading="lazy">
+                    </picture>
+                    <figcaption class="p-5">
+                        <h3 class="font-bold text-gray-900 mb-1">Guarda e localiza</h3>
+                        <p class="text-sm text-gray-600">Mapa por rua, módulo e setor, com posição livre, ocupada ou reservada. A posição fica registrada no volume.</p>
+                    </figcaption>
+                </figure>
+                <figure class="hub-shot rounded-2xl overflow-hidden border border-gray-100">
+                    <picture>
+                        <source srcset="assets/img/hub_tela_03_pedidos.webp" type="image/webp">
+                        <img src="assets/img/hub_tela_03_pedidos.png" alt="Lista de pedidos do CaraCore Hub com filtros de status, canal e destinatário" width="1600" height="1000" loading="lazy">
+                    </picture>
+                    <figcaption class="p-5">
+                        <h3 class="font-bold text-gray-900 mb-1">Acompanha o pedido</h3>
+                        <p class="text-sm text-gray-600">Filtro por status, canal, data e destinatário. Cada pedido aparece como recebido, pronto ou retirado.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="dores" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">O que resolvemos</h2>
+                <p class="text-lg text-gray-600">Quatro dores do ponto de retirada. Uma frase cada.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <article class="rounded-2xl border border-gray-100 p-6 bg-white">
+                    <i class="fas fa-truck-fast hub-accent text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Três canais, uma fila</h3>
+                    <p class="text-sm text-gray-600 mb-3">Mercado Livre, Shopee e Temu entram no mesmo recebimento e no mesmo mapa de posições.</p>
+                    <a href="#origens" class="text-sm font-semibold hub-accent hover:text-indigo-800">Ver os canais</a>
+                </article>
+                <article class="rounded-2xl border border-gray-100 p-6 bg-white">
+                    <i class="fas fa-location-dot hub-accent text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Onde está a caixa?</h3>
+                    <p class="text-sm text-gray-600 mb-3">Setor, rua e módulo no mapa de estoque. A posição fica ligada ao volume, não na memória de quem atendeu.</p>
+                    <a href="#jornada" class="text-sm font-semibold hub-accent hover:text-indigo-800">Ver o mapa</a>
+                </article>
+                <article class="rounded-2xl border-2 border-indigo-200 p-6 hub-chip">
+                    <i class="fas fa-list-check hub-accent text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Balcão sem adivinhação</h3>
+                    <p class="text-sm text-gray-600 mb-3">Busca por destinatário e filtro por status, canal e data. O status do pedido aparece na própria lista.</p>
+                    <a href="#jornada" class="text-sm font-semibold hub-accent hover:text-indigo-800">Ver a lista</a>
+                </article>
+                <article class="rounded-2xl border border-gray-100 p-6 bg-white">
+                    <i class="fas fa-hard-drive hub-accent text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Dados no seu computador</h3>
+                    <p class="text-sm text-gray-600 mb-3">O banco do Hub roda no computador do ponto. A operação não fica pendurada na nuvem de terceiros.</p>
+                    <a href="tecnologia.html" class="text-sm font-semibold hub-accent hover:text-indigo-800">Tecnologia</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="origens" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">De onde vêm as encomendas</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Conectores por API e webhook nos três canais desta edição, além da entrada manual no balcão.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center">
+                    <i class="fas fa-bag-shopping hub-accent text-2xl mb-3" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-1">Mercado Livre</h3>
+                    <p class="text-sm text-gray-600">Pedidos e volumes entram pelo conector do canal.</p>
+                </article>
+                <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center">
+                    <i class="fas fa-store hub-accent text-2xl mb-3" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-1">Shopee</h3>
+                    <p class="text-sm text-gray-600">Pedidos e volumes entram pelo conector do canal.</p>
+                </article>
+                <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center">
+                    <i class="fas fa-cart-shopping hub-accent text-2xl mb-3" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-1">Temu</h3>
+                    <p class="text-sm text-gray-600">Pedidos e volumes entram pelo conector do canal.</p>
+                </article>
+            </div>
+            <p class="text-sm text-gray-500 max-w-3xl mx-auto text-center mt-8">
+                Amazon e B2W não têm conector nesta edição: existem apenas no modelo de dados e não aparecem no filtro de canais. A entrada manual no balcão vale para qualquer encomenda. As notificações por WhatsApp dependem de configuração.
+            </p>
+        </div>
+    </section>
+
+    <section id="planos" class="py-16 md:py-20 bg-gray-50">
+        <span id="plano"></span>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Planos</h2>
+                <p class="text-lg text-gray-600">O produto é Free. O suporte é opcional e pago à parte.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 border-2 border-gray-200">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Free</h3>
+                        <span class="text-2xl font-bold text-gray-900">R$ 0</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">O CaraCore Hub é Free: não há mensalidade pelo uso do produto. A pré-release Windows v2.1.0-rc1.7 está liberada para avaliação até o GA de 06/04/2027.</p>
+                    <ul class="space-y-3 text-gray-700 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check hub-accent mr-3 mt-1"></i>Recebimento, volumes, mapa de posições e lista de pedidos</li>
+                        <li class="flex items-start"><i class="fas fa-check hub-accent mr-3 mt-1"></i>Conectores de Mercado Livre, Shopee e Temu</li>
+                        <li class="flex items-start"><i class="fas fa-check hub-accent mr-3 mt-1"></i>Dados no computador do ponto</li>
+                        <li class="flex items-start"><i class="fas fa-info-circle text-amber-500 mr-3 mt-1"></i>Escopo e limites da edição Free são publicados até o GA.</li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mb-4">Versão de avaliação, sem assinatura digital e ainda não homologada. Mac e Linux ficam fora desta versão.</p>
+                    <a href="download.html" class="hub-accent font-semibold hover:text-indigo-800">Baixar a pré-release v2.1.0-rc1.7</a>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border-2 border-indigo-400 shadow-lg">
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Suporte</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6"><strong>R$ 79,90/mês</strong>, a partir do GA do instalador Windows (06/04/2027). É pagamento recorrente do <strong>suporte</strong>, não do produto.</p>
+                    <ul class="space-y-3 text-gray-700 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check hub-accent mr-3 mt-1"></i>Primeira resposta em até 24 horas</li>
+                        <li class="flex items-start"><i class="fas fa-check hub-accent mr-3 mt-1"></i>Operação do ponto e integrações dos três canais</li>
+                        <li class="flex items-start"><i class="fas fa-info-circle text-amber-500 mr-3 mt-1"></i>Sem o suporte, credenciais, webhooks e ajustes de canal ficam por conta da loja.</li>
+                        <li class="flex items-start"><i class="fas fa-info-circle text-amber-500 mr-3 mt-1"></i>Não cobre o marketplace, a internet da loja nem o computador do ponto.</li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mb-4">A contratação começa no GA. A pré-release em avaliação não é cobrada.</p>
+                    <a href="canal-feedback.html" class="hub-accent font-semibold hover:text-indigo-800">Falar sobre o suporte</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-16 md:py-20 hub-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Avalie a pré-release no seu ponto.</h2>
+                <p class="text-xl text-indigo-50 mb-8">
+                    Instale em um computador Windows, cadastre os seus pedidos e veja se o fluxo cabe na rotina do balcão. Se algo não fechar, escreva para o canal da loja.
+                </p>
+                <a href="canal-feedback.html" class="inline-flex items-center justify-center bg-white hub-accent px-10 py-4 rounded-lg font-bold text-lg hover:bg-indigo-50 transition shadow-lg">
+                    Falar com a Cara Core
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">Gestão logística do ponto de retirada, com os dados no computador do ponto.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="download.html" class="hover:text-white">Download e versões</a></li>
+                        <li><a href="tecnologia.html" class="hover:text-white">Tecnologia</a></li>
+                        <li><a href="https://wiki.caracore.com.br/hub/" class="hover:text-white" rel="noopener">Manual de uso</a></li>
+                        <li><a href="https://www.caracore.com.br/portfolio.html#caracore-hub" class="hover:text-white" rel="noopener">Portfólio</a></li>
+                        <li><a href="https://github.com/chmulato/caracore-hub-releases/releases" class="hover:text-white" target="_blank" rel="noopener noreferrer">Releases</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                        <li><a href="https://wa.me/5541999097797" class="hover:text-white" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p class="mb-2">Pré-release Windows v2.1.0-rc1.7 · sem assinatura digital · não homologada · GA do instalador em 06/04/2027 · Mac e Linux fora desta versão.</p>
+                <p>&copy; 2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white" rel="noopener">www.caracore.com.br</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var m = document.getElementById('mobile-menu-button'), n = document.getElementById('mobile-menu');
+        if (m && n) {
+            m.addEventListener('click', function () {
+                n.classList.toggle('hidden');
+                n.classList.toggle('flex');
+                m.setAttribute('aria-expanded', String(!n.classList.contains('hidden')));
+            });
+        }
+    </script>
     <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Pré-lançamento">Garagem<span class="evo-beta-tooltip">Vitrine e artefatos de pré-lançamento · GA instalador Windows 06/04/2027.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Status público</p><ul class="evo-roadmap-list"><li>Vitrine pública <span class="evo-roadmap-tag">No ar</span></li><li>RC Windows <span class="evo-roadmap-tag">Avaliação · v2.1.0-rc1.7</span></li><li>GA do instalador <span class="evo-roadmap-tag">06/04/2027</span></li></ul></footer>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
-
-
