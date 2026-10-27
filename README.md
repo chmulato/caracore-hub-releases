@@ -45,10 +45,12 @@ O portfólio institucional da Cara Core referencia o produto. Este repo é a **v
 
 ## Links
 
-- **Portal (este repo):** [index.html](index.html) · [download.html](download.html) · [canal-feedback.html](canal-feedback.html) · [tecnologia.html](tecnologia.html)
+- **Páginas publicadas (GitHub Pages serve só `docs/`):** [docs/index.html](docs/index.html) · [docs/download.html](docs/download.html) · [docs/canal-feedback.html](docs/canal-feedback.html) · [docs/tecnologia.html](docs/tecnologia.html)
 - **Loja / vitrine:** [hub.caracore.com.br](https://hub.caracore.com.br/)
 - **Documentação do produto (wiki):** [projeto-hub](https://wiki.caracore.com.br/projeto-hub.html)
 - **Projeto principal:** [github.com/chmulato/caracore-hub](https://github.com/chmulato/caracore-hub)
+
+> **Raiz sem páginas (desde 27/10/2026):** o GitHub Pages serve **somente `docs/`**. Medido em 27/10/2026: um arquivo que só existe na raiz (`PROMPT_IA_REMOVER_RUIDOS_LOJA_HUB.txt`) respondeu **404** e `https://hub.caracore.com.br/download.html` respondeu **200** servindo `docs/download.html`. As cópias legadas da raiz (`index.html`, `download.html`, `tecnologia.html`, `canal-feedback.html`, `slides/` e `assets/evolution-status/`) foram **removidas** neste mesmo dia: estavam paradas na `v2.1.0-rc1.2`, com os hashes de 08/10, e não eram publicadas — só induziam erro de manutenção. A raiz mantém `README.md`, `LICENSE`, `RELEASE_*.md` (notas de release já publicadas), `.nojekyll`, `.github/` e `.cursor/`. Toda alteração de versão, hash ou copy vai **somente** em `docs/`.
 
 Para ativar no GitHub Pages: Settings → Pages → Deploy from branch → main, diretório **/docs**. O arquivo **.nojekyll** evita processamento Jekyll.
 

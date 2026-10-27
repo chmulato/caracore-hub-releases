@@ -7,20 +7,21 @@ alwaysApply: true
 
 ## Repositório e papel
 - **caracore-hub-releases:** vitrine do **CaraCore Hub** — gestão logística interna para pontos de retirada (PUDOs); encomendas de ML, Shopee e Temu; Amazon/B2W sem conector. Não vender como marketplace nem como centro de distribuição.
-- **URL:** https://hub.caracore.com.br/ · GitHub Pages a partir da raiz / `docs/`.
+- **URL:** https://hub.caracore.com.br/ · GitHub Pages **somente de `docs/`** (`CNAME` e `.nojekyll` vivem ali). Os `index.html`, `download.html`, `tecnologia.html`, `canal-feedback.html` e `slides/` da raiz **não são publicados** e estão parados numa revisão antiga: não editar versão neles.
 - **Oficina:** `caracore-hub` — web 2.1 pronta. Banco do produto: SQLite local (WAL). Java 25, Jakarta EE 10, Tomcat 10.1. GA do instalador **06/04/2027**.
 - Retomada IAs (oficina): `../caracore-hub/docs/contexto-rapido.md`
 
-## Pacote vigente — 08/10/2026
+## Pacote vigente — 25/10/2026
 
-- Tag `v2.1.0-rc1.2`, prerelease, unsigned. Instalador `CaraCore.Hub-2.1.0-rc1.2-win-x64.exe`, 281.529.680 bytes, SHA-256 `50d38ff0ee4defce5bb2598967331d0295fb4817dbec59df5d3e7574b22975e5`. ZIP da mesma edição, 333.342.883 bytes, SHA-256 `ec82b2bd57053c252faac4fdbb0066e9a5cea2df293562b35384107e5cb624b4`.
-- FileVersion `2.1.0-rc1.2`. Manifesto do commit `463a854`, árvore limpa. Não é GA. A QA da rodada 4 (16/10/2026) não aprovou esta build; D1–D6 seguem abertos.
-- `v2.1.0-rc1.1` conserva o pacote de 06/10. `v2.1.0-rc1` conserva o instalador de 05/10.
+- Tag `v2.1.0-rc1.6`, prerelease, unsigned. Instalador `CaraCore.Hub-2.1.0-rc1.6-win-x64.exe`, 274.160.424 bytes, SHA-256 `05b87529112db79db67e50d1e708c1dc8568daf69c905f73bfb1abe7b4afc8c4` (22:06:45Z). ZIP da mesma edição, 324.500.797 bytes, SHA-256 `fe3400c7a3d4101452f95d2f26ca82b0c7bfe84d427dbfaa6659af17a17c9c0d` (22:11:26Z). WAR interno 69.447.783 bytes, `70a3f900…348311`, idêntico em `web/target`, `electron/app` e `electron/runtime/tomcat/webapps`.
+- FileVersion `2.1.0-rc1.6`. `sourceTreeDirty=false` nos dois manifestos; `verify` PASS em `dist_hub/verify/20261025T214503Z` (`promotable=true`, 2.555 testes). E2E instalador 61 PASS / 1 WARN / 0 FAIL e ZIP 59 PASS / 1 WARN / 0 FAIL. Não é GA e não está homologada: rodada de QA, **B7** (smoke Linux x64) e S6.9 seguem abertos.
+- `v2.1.0-rc1.2` conserva o pacote de 08/10, `v2.1.0-rc1.1` o de 06/10 e `v2.1.0-rc1` o instalador de 05/10. As versões `rc1.3`, `rc1.4` e `rc1.5` nunca foram tagueadas.
+- **Pendência de produto conhecida:** a tela Auditoria e Logs (`/admin/auditoria`) só se abre pela URL — o `navbar.jsp` não tem item de menu. A copy da loja diz isso explicitamente; o item entra na próxima pré-release.
 - A próxima pré-release é outra tag. Este repositório recebe a página e os assets; a central `caracore-loja` e a matriz acompanham no mesmo corte. A oficina privada só vai ao remoto quando o dono pedir.
 - **20/10/2026:** README, `RELEASE_2.1.0-rc1.md` e nota de leitura no laudo de 19/09 alinhados à aplicação web 2.1 (Tomcat embutido no instalador, SQLite local); `WAR`/`oficina` fora do texto público. Commit `ceb7a51`. Sem tag ou asset novo; o `WAR` continua como artefato interno de build.
 
 ## Mensagem honesta
-- Vitrine e artefatos de **pré-lançamento** já públicos (instalador e ZIP da `v2.1.0-rc1.2`).
+- Vitrine e artefatos de **pré-lançamento** já públicos (instalador e ZIP da `v2.1.0-rc1.6`).
 - GA do instalador Windows: **06/04/2027**. Não publicar `download.html` como se o EXE de GA já existisse.
 - O banco do Hub é SQLite local (WAL), na oficina e na pré-release. Java 25, Jakarta EE 10, Tomcat 10.1.
 - Não descrever como Flask ou “cérebro da Cara Core”. Tia Sócia = pitch.
