@@ -17,4 +17,10 @@
 /* Capturas do produto: mesma proporção (16:10) para os três passos ficarem alinhados. */
 figure.hub-shot { background: #f8fafc; }
 figure.hub-shot picture { display: block; }
-figure.hub-shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; }
+
+/* CTA do cabeçalho — estrutura e classes iguais nas três lojas (PDV, Hub, CSO).
+   Só a cor muda, e ela vem das variáveis do tema da loja. */
+.cta-link { color: #374151; }
+.cta-link:hover { color: var(--green); }
+.cta-btn { background: linear-gradient(135deg, var(--green) 0%, var(--green2) 100%); }
+
