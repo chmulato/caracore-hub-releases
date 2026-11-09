@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download e versões — CaraCore Hub | Cara Core Informática</title>
-    <meta name="description" content="Baixe a versão estável Windows v2.1.0-rc1.10 do CaraCore Hub: ZIP portátil com SHA-256 publicado. Pacote sem assinatura digital.">
+    <meta name="description" content="Baixe a pré-release Windows v2.1.0-rc1.10 do CaraCore Hub: ZIP portátil com SHA-256 publicado e aceite de QA pendente. Pacote sem assinatura digital.">
     <meta name="author" content="Cara Core Informática">
     <meta property="og:title" content="Download e versões — CaraCore Hub">
-    <meta property="og:description" content="Versão estável Windows v2.1.0-rc1.10 do CaraCore Hub: ZIP portátil com SHA-256 publicado. Pacote sem assinatura digital.">
+    <meta property="og:description" content="Pré-release Windows v2.1.0-rc1.10 do CaraCore Hub: ZIP portátil com SHA-256 publicado e aceite de QA pendente. Pacote sem assinatura digital.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:url" content="https://hub.caracore.com.br/download.html">
-    <meta property="og:image" content="https://hub.caracore.com.br/assets/img/hub_tela_02_mapa.png">
-    <meta property="og:image:alt" content="Mapa de posições do CaraCore Hub, com ruas, módulos e posições ocupadas">
+    <meta property="og:image" content="https://hub.caracore.com.br/assets/img/og-hub-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cartão do CaraCore Hub — gestão do ponto de retirada (PUDO)">
+    <meta property="og:site_name" content="CaraCore Hub">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://hub.caracore.com.br/download.html">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,6 +28,47 @@
     <meta name="theme-color" content="#4f46e5">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CaraCore Hub",
+      "url": "https://hub.caracore.com.br/download.html",
+      "description": "ZIP portátil do CaraCore Hub para Windows x64: recebe, guarda por posição e acompanha encomendas de Mercado Livre, Shopee e Temu, com os dados no computador do ponto. Pacote sem assinatura digital.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows x64",
+      "softwareVersion": "2.1.0-rc1.10",
+      "datePublished": "2026-11-07",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cara Core Informática",
+        "url": "https://caracore.com.br/"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free (Starter)",
+          "price": "0",
+          "priceCurrency": "BRL",
+          "url": "https://hub.caracore.com.br/download.html"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "79.90",
+          "priceCurrency": "BRL",
+          "url": "https://wa.me/5541999097797",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "79.90",
+            "priceCurrency": "BRL",
+            "billingDuration": "P1M"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="smooth-scroll bg-gray-50">
     <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
@@ -53,7 +97,7 @@
                     <a href="download.html" class="hub-accent font-semibold">Versões e download</a>
                     <a href="canal-feedback.html" class="cta-link text-sm font-medium transition">Demonstração</a>
                     <a href="download.html" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
-                        Baixar <span class="ml-1 text-xs font-normal opacity-90">versão estável</span>
+                        Baixar <span class="ml-1 text-xs font-normal opacity-90">a pré-release</span>
                     </a>
                 </div>
                 <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
@@ -64,10 +108,10 @@
     <section class="portal-hero hub-hero hub-bg text-white py-14 md:py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-sm uppercase tracking-wide text-indigo-100 mb-3">Windows x64 · <span class="whitespace-nowrap">versão estável na distribuição</span></p>
+                <p class="text-sm uppercase tracking-wide text-indigo-100 mb-3">Windows x64 · <span class="whitespace-nowrap">pré-release para avaliação</span></p>
                 <h1 class="text-3xl md:text-5xl font-bold mb-4">Download do CaraCore Hub</h1>
                 <p class="text-lg text-indigo-50 mb-8">
-                    ZIP portátil da versão <strong>v2.1.0-rc1.10</strong>, versão estável na distribuição. O arquivo não tem assinatura digital.
+                    ZIP portátil da versão <strong>v2.1.0-rc1.10</strong>, pré-release para avaliação. O arquivo não tem assinatura digital e o aceite de QA desta build está pendente.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center">
                     <a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.10/CaraCore-Hub-2.1.0-rc1.10-windows-x64.zip" class="inline-flex items-center justify-center bg-white hub-accent px-8 py-4 rounded-lg font-bold hover:bg-indigo-50 transition shadow-lg">
@@ -92,7 +136,7 @@
                     <a href="https://github.com/chmulato/caracore-hub-releases/releases/download/v2.1.0-rc1.10/CaraCore-Hub-2.1.0-rc1.10-windows-x64.zip" class="hub-accent font-semibold hover:text-indigo-800">Baixar o ZIP →</a>
                 </div>
                 <p class="text-sm text-gray-500 mt-6">
-                    Também no GitHub: <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.10" class="hub-accent hover:text-indigo-800 underline">release v2.1.0-rc1.10</a> (versão estável, Latest), com SHA256SUMS e o manifesto de build. Manual de uso em <a href="https://wiki.caracore.com.br/hub/" class="hub-accent hover:text-indigo-800 underline">wiki.caracore.com.br/hub</a>.
+                    Também no GitHub: <a href="https://github.com/chmulato/caracore-hub-releases/releases/tag/v2.1.0-rc1.10" class="hub-accent hover:text-indigo-800 underline">release v2.1.0-rc1.10</a> (marcada como Latest no GitHub; pré-release para avaliação), com SHA256SUMS e o manifesto de build. Manual de uso em <a href="https://wiki.caracore.com.br/hub/" class="hub-accent hover:text-indigo-800 underline">wiki.caracore.com.br/hub</a>.
                 </p>
             </div>
         </div>
@@ -204,7 +248,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
-                <p class="mb-2">Versão estável na distribuição: Windows v2.1.0-rc1.10 · sem assinatura digital · GA do instalador em 06/04/2027 · Mac e Linux fora desta versão.</p>
+                <p class="mb-2">Pré-release na distribuição: Windows v2.1.0-rc1.10 · sem assinatura digital · aceite de QA pendente · GA do instalador em 06/04/2027 · Mac e Linux fora desta versão.</p>
                 <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white" rel="noopener">www.caracore.com.br</a></p>
             </div>
         </div>
